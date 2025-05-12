@@ -20,8 +20,238 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- 패럴렉스 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <!-- 유튜브 라이브러리 -->
+        <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
     </head>
     <body>
+        <!-- 헤더 시작 { -->
+       <header>
+           <div class="inner">
+               <a href="./index.html">
+                   <img src="./img/header/black_logo.svg" alt="Red Bricks" class="black logo"/>
+                   <img src="./img/header/white_logo.svg" alt="Red Bricks" class="white logo"/>
+               </a>
+               <ul class="menuList">
+                    <li>
+                        <a href="./sub01_1.html" class="item">ABOUT</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub01_1.html">ABOUT</a></li>
+                            <li><a href="./sub01_2.html">CONTACT</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub01_2.html" class="item">SERVICE</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub02_1.html">DIGITAL MARKETING <br/>CONSULTING</a></li>
+                            <li><a href="./sub02_2.html">CONTENT DESIGN <br/>SEVICE</a></li>
+                            <li><a href="./sub02_3.html">CREATIVE MEDIA <br/>CONTENTS</a></li>
+                            <li><a href="./sub02_4.html"> VOUCHER </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub03_2.html"><div class="item">PORTFOLIO</div></a></li>
+                    <li>
+                        <a href="./sub04_1/html" class="item">CAREERS</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub04_1.html">BRICKS LIFE</a></li>
+                            <li><a href="./sub04_2.html">인재채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub04_1.html" class="item">NEWSROOM</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub04_1.html">NEWS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub01_2.html" class="contactBtn"> <img src="./img/header/check_icon.svg" alt="v" class="icon white" /><img src="./img/header/balck_check_icon.svg" alt="v" class="icon black" /> <span class="text">CONTACT</span></a></li>
+                </ul>
+                <button type="button" class="slideMenuBtn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+           </div>
+       </header>
+       <section class="mobileMenu">
+           <ul class="menuList">
+                <li>
+                    <div class="item">
+                        <span class="text">ABOUT</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub01_1.html">ABOUT</a></li>
+                        <li><a href="./sub01_2.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="item">
+                        <span class="text">SERVICE</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub02_1.html">DIGITAL MARKETING CONSULTING</a></li>
+                        <li><a href="./sub02_2.html">CONTENT DESIGN SEVICE</a></li>
+                        <li><a href="./sub02_3.html">CREATIVE MEDIA CONTENTS</a></li>
+                        <li><a href="./sub02_4.html"> VOUCHER </a></li>
+                    </ul>
+                </li>
+                <li><a href="./sub03_1.index"><div class="item">PORTFOLIO</div></a></li>
+                <li>
+                    <div class="item">
+                        <span class="text">CAREERS</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub04_1.html">BRICKS LIFE</a></li>
+                        <li><a href="./sub04_2.html">인재채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="item">
+                        <span class="text">NEWSROOM</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub05_1.html">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="./sub01_2.html" class="item"> <b class="textWrap"><span class="text">CONTACT</span></b></a></li>
+           </ul>
+       </section>
+       <!-- } 헤더 끝 -->
+
+     
+       <main class="main">
+           <section class="visualSec">
+               <div class="videoBg">
+                    <div data-vbg-autoplay="true" data-vbg="https://youtu.be/r9pbtgGky4g?si=TM0TeUlOeYWGBWoy"></div>
+               </div>
+               <div class="inner">
+                    <div class="t1">우리는 브랜드의 가능성을 믿습니다</div>
+                    <div class="t2">
+                        Red Bricks는 마케팅으로 <br/>
+                        브랜드가 자라나는 환경을 만듭니다.
+                    </div>
+               </div>
+           </section>
+           <section class="aboutSec">
+               <div class="inner">
+                   <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
+                   <div class="main_title2">지속적인 성장과 신뢰의 여정</div>
+                   <div class="content">
+                        15년의 경험, 300여 개 이상의 고객사와 함께한 여정
+                   </div>
+
+                   <ul class="circle_list">
+                       <li>
+                           <div class="circle redBg"><span class="title"><b class="white_circle"><span class="barWrap"></span></b>회사소개</span></div>
+                       </li>
+                       <li>
+                            <div class="circle grayBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>서비스 소개</span></div>
+                        </li>
+                        <li>
+                            <div class="circle mintBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>바우처 사업</span></div>
+                        </li>
+                   </ul>
+               </div>
+               <div class="bottomBox">
+                    <div class="grayBg">
+                        <div class="box">
+                            <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
+                            <div class="main_title2"><span class="count">82.4</span>%</div>
+                            <div class="info">2026.01.16 설립</div>
+                        </div>
+                        <div class="box">
+                            <div class="main_title1">설립일</div>
+                            <div class="main_title2"><span class="count">2006</span></div>
+                            <div class="info">2026.01.16 설립</div>
+                        </div>
+                        <div class="box">
+                            <div class="main_title1">설립일</div>
+                            <div class="main_title2"><span class="count">2006</span></div>
+                            <div class="info">2026.01.16 설립</div>
+                        </div>
+                    </div>
+                </div>
+           </section>
+       </main>
+
+
        
+        <!--개인정보처리방침-->
+        <section class="privacyPopup" id="privacyPopup">
+            <div class="inner">
+                <div class="contentWrap">
+                    <div class="titleBox">
+                        <span>개인정보 처리방침</span>
+                        <img src="./img/common/close-btn.png" alt="closeBtn" class="closeBtn">
+                    </div>
+                    <div class="contentBox">
+                        해당 홈페이지에 맞는 개인정보처리방침을 입력합니다.           
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- 푸터 시작 { -->
+       <footer>
+            <section class="contentSection">
+                <div class="inner">
+                    <div class="halfBox">
+                        <div class="leftBox">
+                            <img src="./img/header/black_logo.svg" alt="Red Bricks" class="logo" />
+                            <ul class="infoList">
+                                <li>(주)레드브릭스</li>
+                                <li>대표자 : 김광현</li>
+                                <li>대표번호 : 02-338-2799</li>
+                                <li> FAX : 02-6280-2512</li>
+                                <li>E-mail : service@redbricks.co.kr</li>
+                                <li>주소 : 서울 금천구 벚꽃로 254 14층 1414호</li>
+                            </ul>
+                        </div>
+                        <div class="rightBox">
+                            <div class="title">Red Bricks SNS</div>
+                            <ul class="snsList">
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/instagram_icon.svg" alt="인스타그램" class="icon" />
+                                        <div class="snsName">instagram</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/youtube_icon.svg" alt="유튜브" class="icon" />
+                                        <div class="snsName">Youtube</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/instagram_icon.svg" alt="인스타그램" class="icon" />
+                                        <div class="snsName">Project Man</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/youtube_icon.svg" alt="유튜브" class="icon" />
+                                        <div class="snsName">MoodStudio</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bottomSec">
+                <div class="inner">
+                    <a href="#" class="privacy privacyPopupBtn">개인정보 처리방침</a>
+                    <div class="copy_right">ⓒ Red Bricks. All rights reserved</div>
+                </div>
+            </section>
+       </footer>
+       <!-- } 푸터 끝 -->
+
     </body>
 </html>

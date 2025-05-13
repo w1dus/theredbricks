@@ -50,7 +50,7 @@ header.whiteBg .logo.black{ display: block; }
 header.whiteBg .logo.white{ display: none; }
 header .menuList{ text-align: center; font-weight: 500; display: flex; align-items: center; gap: 70px; } 
 header .menuList > li{ display: flex; align-items: center; justify-content: center; position: relative; }
-header .menuList .subMenu{ display: none; min-width: 200px; top: calc(100% + 20px); position: absolute; background-color: #fff; color: #222; }
+header .menuList .subMenu{ display: none; padding: 10px 0; min-width: 200px; top: calc(100% + 20px); position: absolute; background-color: #fff; color: #222; }
 header .menuList .subMenu > li a{ display: block; padding: 10px 10px; line-height: 1.3em; }
 header .contactBtn{ display: flex; align-items: center; gap: 5px; border: 2px solid #fff; border-radius: 100px; padding: 7px 12px; }
 header .contactBtn .black{ display: none; }
@@ -300,7 +300,8 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .howRedBricksSection .textBox .circle{ border-radius: 50%; width: 2vw; height: 2vw; background-color: #fff; }
 
 @media screen and (max-width: 650px) { 
-    .howRedBricksSection .textBox{ font-size: 13vw; }
+    .howRedBricksSection{ padding-bottom: 50px; }
+    .howRedBricksSection .textBox{ font-size: 10vw; }
 }
 
 /* .logoSlideSec */
@@ -335,9 +336,64 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
     .logoSlideSec .btnWrap .item{ font-size: 14px; padding: 10px; }
 }
 
+/* .main .quadrangleSection */
+.main .quadrangleSection{ word-break: keep-all; overflow: hidden; position: relative; min-height: 100vh; padding: 0 0 120px 0; display: flex; align-items: center; justify-content: center; }
+.main .quadrangleSection .inner{ position: relative; }
+.main .quadrangleSection .inner::before{ content:''; display: block; width: 100%; height: 100%; background-color: #F7F7F7; position: absolute; left: calc(-100% - 10px); top: 0; border-radius: 10px; }
+.main .quadrangleSection .inner::after{ content:''; display: block; width: 100%; height: 100%; background-color: #F7F7F7; position: absolute; right: calc(-100% - 10px); top: 0; border-radius: 10px; }
+.main .quadrangleSection .halfBox{ display: flex; gap: 10px; }
+.main .quadrangleSection .box{ display: flex; flex-direction: column; }
+.main .quadrangleSection .imgItem{ display: flex; align-items: center; justify-content: center; position: relative; border-radius: 10px; overflow: hidden; width: 580px; height: 500px; }
+.main .quadrangleSection .imgItem .background{ margin-left: -20%; width: 120%; transition: transform 1s; }
+.main .quadrangleSection .imgItem:hover .background{ transform: scale(1.1); }
+.main .quadrangleSection .imgItem .contentBox{ 
+    z-index: 1; position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 25px; 
+    color: #fff; display: flex; justify-content: space-between;
+}
+.main .quadrangleSection .imgItem .contentBox .t1{ font-size: 22px; font-weight: 500; }
+.main .quadrangleSection .imgItem .contentBox .viewMore{ font-size: 14px; opacity: 0; }
+.main .quadrangleSection .imgItem:hover .contentBox .viewMore{ opacity: 1;} 
+.main .quadrangleSection .viewMore{ display: flex; align-items: center; gap: 5px; font-weight: 300; }
+.main .quadrangleSection .itemList{ flex-grow: 1; display: flex; flex-wrap: wrap;  width: calc(100% + 10px); margin-left: -5px; margin-top: -5px; }
+.main .quadrangleSection .itemList > li{ width: calc(100% / 2); padding: 5px 5px; }
+.main .quadrangleSection .itemList .item{ display: flex; flex-direction: column; transition: background .5s; padding: 30px; border-radius: 10px; background-color: #EBEBEB; height: 100%; }
+.main .quadrangleSection .itemList .item:hover{ background-color: #CD354E; }
+.main .quadrangleSection .itemList .item .title{ font-size: 22px;  }
+.main .quadrangleSection .itemList .item:hover{  color: #fff; }
+.main .quadrangleSection .itemList .item .content{ line-height: 1.5em; flex-grow: 1; margin-top: 5px; font-size: 14px; }
+.main .quadrangleSection .itemList .item .viewMore{ margin-bottom: 15%; color: #fff; display: flex; align-items: center; gap: 5px; font-size: 14px; opacity: 0; transition: opacity .5s; }
+.main .quadrangleSection .itemList .item:hover .viewMore{ opacity: 1; }
+.main .quadrangleSection .blackBtn{ transition: background .5s; margin-top: 5px; display: block; border-radius: 10px; text-align: center; border-radius: 20px; padding: 30px 20px; font-size: 22px; font-weight: 700; color: #fff; background-color: #222; }
+.main .quadrangleSection .blackBtn:hover{ background-color: #CD354E; }
+
+@media screen and (max-width: 1250px) { 
+    .main .quadrangleSection .imgItem{ width: 50vw; height: 55vw; }
+    .main .quadrangleSection .imgItem .background{ width: 130%; }
+    .main .quadrangleSection .imgItem .contentBox .t1{ font-size: 18px; }
+    .main .quadrangleSection .itemList .item{ padding: 20px; }
+    .main .quadrangleSection .itemList .item .title{ font-size: 18px; }
+    .main .quadrangleSection .blackBtn{ padding: 20px 10px; }
+    .main .quadrangleSection .itemList .item .content{ word-break: keep-all; }
+    .main .quadrangleSection .itemList .item .content br{ display: none; }
+    .main .quadrangleSection .blackBtn{ font-size: 18px; }
+}
+@media screen and (max-width: 950px) { 
+    .main .quadrangleSection .halfBox{ flex-direction: column; }
+    .main .quadrangleSection .imgItem .contentBox .viewMore{ opacity: 1; position: absolute; right: 20px; bottom: 20px; }
+    .main .quadrangleSection .imgItem .contentBox .viewMore .txt{ display: none; }
+    .main .quadrangleSection .imgItem .background{ width: 120%; }
+    .main .quadrangleSection .imgItem{ width: 100%; height: 59vw; }
+    .main .quadrangleSection .itemList .item .viewMore{ margin-bottom: 0; opacity: 1; color: #222; }
+    .main .quadrangleSection .itemList .item:hover .viewMore{ color: #fff; }
+}
+@media screen and (max-width: 650px) { 
+    .main .quadrangleSection .itemList > li{ width: 100%; }
+    .main .quadrangleSection .itemList .item{ position: relative; }
+    .main .quadrangleSection .itemList .item .viewMore{ position: absolute; right: 20px; top: 20px; } 
+    .main .quadrangleSection .itemList .item .viewMore .txt{ display: none; }
+}
 
 
 
-
-
-
+/* .main .positiveSection */
+.main .positiveSection{ position: relative; min-height: 100vh; padding: 100px 0; display: flex; align-items: center; justify-content: center; }

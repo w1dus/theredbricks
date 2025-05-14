@@ -43,6 +43,7 @@ header{ z-index: 999; transition: background .5s; background-color: rgba(0,0,0,0
 header.on{ background-color: #fff; color: #222; }
 header.whiteBg{ background-color: #fff; color: #222; }
 header .inner{ display: flex; align-items: center; justify-content: space-between; }
+header.transparent{ background-color: transparent;} 
 header .logo.black{ display: none; }
 header.on .logo.black{ display: block; }
 header.on .logo.white{ display: none; }
@@ -557,14 +558,19 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
     .sub01_1 .historySec .year_list .item .main_title2{ width: 200px; }
 }
 @media screen and (max-width: 650px) { 
+    .sub01_1 .historySec .year_list > li + li{ margin-top: 40px; }
     .sub01_1 .historySec .year_list .item .main_title2{ width: 80px; }
     .sub01_1 .historySec .year_list .item .content{ font-size: 14px; margin-top: 10px; padding-left: 23px; }
 }
 
 
-
-
-
+/* .sub .topBannerSec */
+.sub .topBannerSec{ position: relative; height: 440px; display: flex; align-items: center; justify-content: center; background-image: url('../img/sub/topBannerSec/background.jpg'); background-size: cover; background-repeat: no-repeat; }
+.sub .topBannerSec .inner{ position: relative; }
+.sub .topBannerSec .circle{ position: absolute; }
+.sub .topBannerSec .circle2{ right: 0; top: 0; }
+.sub .topBannerSec .circle1{ left: 0; top: calc(100% - 100px); }
+.sub .topBannerSec .title{ text-align: center; color: #fff; font-size: 72px; font-weight: 700; }
 
 
 

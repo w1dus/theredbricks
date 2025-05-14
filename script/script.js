@@ -22,7 +22,7 @@ const sub01_1_circleSec = () => {
         start: "top top", // 첫 번째 start
         end: "bottom top", // 첫 번째 end
         pin: true, // 해당 섹션 고정 (한 번만 적용)
-        markers: true, // 디버그용 마커 표시
+        markers: false, // 디버그용 마커 표시
         onUpdate: (self) => {
             if (self.direction === 1) { // 스크롤 내릴 때
               if (self.progress > 0.66) {

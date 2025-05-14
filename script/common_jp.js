@@ -4,11 +4,49 @@
 document.addEventListener("DOMContentLoaded", function(e){
     animationOnHandler();
     headerScrollHandler();
+    yearAni();
 })
 document.addEventListener("scroll", function(){
     animationOnHandler();
 })
 
+const yearAni = () => {
+    const countList = document.querySelectorAll('.year_ani');
+  
+    if (countList.length) {
+      const onScroll = () => {
+        const viewportMiddle = window.innerHeight / 2;
+  
+        let closestEl = null;
+        let closestDistance = Infinity;
+  
+        countList.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const elementMiddle = rect.top + rect.height / 2;
+          const distance = Math.abs(viewportMiddle - elementMiddle);
+  
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestEl = el;
+          }
+        });
+  
+        // 모든 요소에서 .on 제거
+        countList.forEach(el => el.classList.remove('on'));
+  
+        // 가장 가까운 요소에만 .on 추가
+        if (closestEl) {
+          closestEl.classList.add('on');
+        }
+      };
+  
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+  };
+  
+  
 const headerScrollHandler = () => {
     /* header */
     const header_main = document.querySelector('header');

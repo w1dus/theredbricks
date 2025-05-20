@@ -932,7 +932,8 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .sub03_1 .portfolioSec .contentBox .item:hover .imgBox .bg{ transform: scale(1.2); }
 .sub03_1 .portfolioSec .contentBox .item .title{ margin-top: 10px; font-size: 20px; }
 
-.sub03_1 .portfolioSec .moreBtn{ display: block; margin: 0 auto; max-width: 280px; border-radius: 100px; width: 100%; padding: 16px; background-color: #CF2E41; color: #fff; border: none; margin-top: 50px; }
+.sub03_1 .portfolioSec .moreBtn{ font-weight: 600; transition: border .5s, background .5s, color .5s; border: 2px solid #CF2E41; display: block; margin: 0 auto; max-width: 280px; border-radius: 100px; width: 100%; padding: 16px; background-color: #CF2E41; color: #fff; margin-top: 50px; }
+.sub03_1 .portfolioSec .moreBtn:hover{ background-color: #fff; color: #CD354E; }
 
 @media screen and (max-width: 1250px) {
     .sub03_1 .portfolioSec .contentBox .imgBox{ border-radius: 1vw; height: 27vw; }
@@ -1114,11 +1115,40 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 }
 
 
+/* .sub.sub05 .topBannerSec */
+.sub.sub05 .topBannerSec .circle3{ position: absolute; right: 0; bottom: 0; }
 
 
+/* .sub.sub05_1 .contentSection */
+.sub.sub05_1 .contentSection{ position: relative; overflow: hidden; padding: 40px 0; }
+.sub.sub05_1 .contentSection .gellary_list{ display: flex; flex-wrap: wrap; width: calc(100% + 10px); margin-left: -5px; }
+.sub.sub05_1 .contentSection .gellary_list > li{ width: calc(100% / 3); padding: 5px; }
+.sub.sub05_1 .contentSection .gellary_list .imgBox{ border-radius: 10px; overflow: hidden; position: relative; height: 238px;  }
+.sub.sub05_1 .contentSection .gellary_list .imgBox .bg{ transition: transform .5s; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.sub.sub05_1 .contentSection .gellary_list .item:hover .imgBox .bg{ transform: scale(1.2); }
+.sub.sub05_1 .contentSection .gellary_list .contentBox{ margin-top: 10px; }
+.sub.sub05_1 .contentSection .gellary_list .contentBox .label{ display: inline-block; padding: 5px 10px; border: 1px solid #CF2E41; border-radius: 54px; background-color: #fff; color: #CF2E41; font-size: 14px; }
+.sub.sub05_1 .contentSection .gellary_list .contentBox .title{  overflow: hidden; font-weight: 500; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.5em; font-size: 20px; margin-top: 5px; }
 
+.sub.sub05_1 .contentSection .moreViewBtn{ display: block; margin: 30px auto 0 auto; width: 100%; max-width: 280px; border-radius: 100px; padding: 16px 10px; border: 2px solid #CF2E41; color: #fff; background: #CF2E41; transition: background .5s, color .5s, border .5s; }
+.sub.sub05_1 .contentSection .moreViewBtn:hover{ background-color: #fff; color: #CF2E41; }
 
+@media screen and (max-width: 1250px) {
+    .sub.sub05 .topBannerSec .circle3{ width: 30vw; height: auto; }
+    .sub.sub05_1 .contentSection .gellary_list .imgBox{ height: 19vw; }
+    .sub.sub05_1 .contentSection .gellary_list .contentBox .title{ font-size: 18px; }
+}
+@media screen and (max-width: 1250px) {
+    .sub.sub05_1 .contentSection .gellary_list > li{ width: calc(100% / 2); }
+    .sub.sub05_1 .contentSection .gellary_list .imgBox{ height: 28vw; }
 
+}
+@media screen and (max-width: 650px) {
+    .sub.sub05 .topBannerSec .circle3{ width: 50vw;}
+    .sub.sub05_1 .contentSection .gellary_list > li{ width: 100%; }
+    .sub.sub05_1 .contentSection .gellary_list .imgBox{ height: 52vw; }
+    .sub.sub05_1 .contentSection .moreViewBtn{ font-size: 16px; padding: 10px; max-width: 140px; }
+}
 
 @keyframes fadeIn {
     0% { opacity: 0; transform: translate3d(0px, 30px, 0px); }

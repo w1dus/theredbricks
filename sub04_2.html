@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--스타일-->
+        <link rel="stylesheet" href="./style/default.css">
+        <link rel="stylesheet" href="./style/font.css">
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="./style/swiper.min.css">
+        <link rel="stylesheet" href="./style/animation.css">
+        <link rel="stylesheet" href="./style/customBoard.css">
+        <!--스크립트-->
+        <script type="text/javascript" src="./script/script.js"></script>
+        <script type="text/javascript" src="./script/swiper.min.js"></script>
+        <script type="text/javascript" src="./script/customBoard.js"></script>
+        <script type="text/javascript" src="./script/common_jp.js"></script>
+        <!--폰트-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- 패럴렉스 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <!-- 유튜브 라이브러리 -->
+        <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+    </head>
+    <body>
+        <!-- 헤더 시작 { -->
+       <header class="whiteBg2">
+           <div class="inner">
+               <a href="./index.html">
+                   <img src="./img/header/black_logo.svg" alt="Red Bricks" class="black logo"/>
+                   <img src="./img/header/white_logo.svg" alt="Red Bricks" class="white logo"/>
+               </a>
+               <ul class="menuList">
+                    <li>
+                        <a href="./sub01_1.html" class="item">ABOUT</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub01_1.html">ABOUT</a></li>
+                            <li><a href="./sub01_2.html">CONTACT</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub02_1.html" class="item">SERVICE</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub02_1.html">DIGITAL MARKETING <br/>CONSULTING</a></li>
+                            <li><a href="./sub02_2.html">CONTENT DESIGN <br/>SEVICE</a></li>
+                            <li><a href="./sub02_3.html">CREATIVE MEDIA <br/>CONTENTS</a></li>
+                            <li><a href="./sub02_4.html"> VOUCHER </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub03_1.html"><div class="item">PORTFOLIO</div></a></li>
+                    <li>
+                        <a href="./sub04_1.html" class="item">CAREERS</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub04_1.html">BRICKS LIFE</a></li>
+                            <li><a href="./sub04_2.html">인재채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub04_1.html" class="item">NEWSROOM</a>
+                        <ul class="subMenu">
+                            <li><a href="./sub04_1.html">NEWS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub01_2.html" class="contactBtn"> <img src="./img/header/check_icon.svg" alt="v" class="icon white" /><img src="./img/header/balck_check_icon.svg" alt="v" class="icon black" /> <span class="text">CONTACT</span></a></li>
+                </ul>
+                <button type="button" class="slideMenuBtn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+           </div>
+       </header>
+       <section class="mobileMenu">
+           <ul class="menuList">
+                <li>
+                    <div class="item">
+                        <span class="text">ABOUT</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub01_1.html">ABOUT</a></li>
+                        <li><a href="./sub01_2.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="item">
+                        <span class="text">SERVICE</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub02_1.html">DIGITAL MARKETING CONSULTING</a></li>
+                        <li><a href="./sub02_2.html">CONTENT DESIGN SEVICE</a></li>
+                        <li><a href="./sub02_3.html">CREATIVE MEDIA CONTENTS</a></li>
+                        <li><a href="./sub02_4.html"> VOUCHER </a></li>
+                    </ul>
+                </li>
+                <li><a href="./sub03_1.index"><div class="item">PORTFOLIO</div></a></li>
+                <li>
+                    <div class="item">
+                        <span class="text">CAREERS</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub04_1.html">BRICKS LIFE</a></li>
+                        <li><a href="./sub04_2.html">인재채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="item">
+                        <span class="text">NEWSROOM</span>
+                        <div class="plus_minus"><span class="bar"></span><span class="bar"></span></div>
+                    </div>
+                    <ul class="subMenu">
+                        <li><a href="./sub05_1.html">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="./sub01_2.html" class="item"> <b class="textWrap"><span class="text">CONTACT</span></b></a></li>
+           </ul>
+       </section>
+       <!-- } 헤더 끝 -->
+
+     
+       <main class="sub sub04 sub04_2 sec_top">
+            <section class="contentSection">
+                <div class="inner">
+                    <div class="halfBox">
+                        <div class="titleDiv">
+                            <h1 class="main_title2">채용안내</h1>
+                            <div class="main_subTitle">
+                                FAQ
+                            </div>
+                        </div>
+                        <div class="rightBox">
+                            <div class="contentWrap">
+                                <div class="dotTitle">채용 절차</div>
+                                <div class="contentDiv">
+                                    <ul class="dotList">
+                                        <li>
+                                            <div class="item" style="background-image: url('./img/sub/sub04_2/icon1.svg');"></div>
+                                            <div class="text">서류전형</div>
+                                        </li>
+                                        <li>
+                                            <div class="item" style="background-image: url('./img/sub/sub04_2/icon2.svg');"></div>
+                                            <div class="text">1차 인터뷰</div>
+                                        </li>
+                                        <li>
+                                            <div class="item" style="background-image: url('./img/sub/sub04_2/icon3.svg');"></div>
+                                            <div class="text">2차 인터뷰</div>
+                                        </li>
+                                        <li>
+                                            <div class="item" style="background-image: url('./img/sub/sub04_2/icon4.svg');"></div>
+                                            <div class="text">처우 협의</div>
+                                        </li>
+                                        <li>
+                                            <div class="item" style="background-image: url('./img/sub/sub04_2/icon5.svg');"></div>
+                                            <div class="text">최종 합격</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contentWrap">
+                                <div class="dotTitle">안내사항</div>
+                                <div class="contentDiv">
+                                    <div class="grayBgDiv">
+                                        <p class="dot">전형별 상세 절차는 합격자 분들께 개별적으로 안내해 드립니다.</p>
+                                        <p class="dot">채용 절차는 상황에 따라 일부 변동이 발생할 수 있으며, 각 전형의 결과는 합격여부에 관계없이 메일로 안내드립니다.</p>
+                                        <p class="dot">1차 인터뷰는 실무 역량과 업무 경험을 중점적으로 다룹니다. (1시간 가량 소요)</p>
+                                        <p class="dot">2차 인터뷰는 지원자의 비전과 레드브릭스의 문화를 중점적으로 다룹니다. (1시간 가량 소요)</p>
+                                        <p class="dot">최종 인터뷰가 마무리된 이후 처우와 입사 일정을 협의합니다.</p>
+                                        <p class="dot">학력, 경력사항 등 입사지원서 기재사항이 사실과 다를 경우 합격이 취소될 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="halfBox">
+                        <div class="titleDiv">
+                            <div class="main_subTitle">채용안내</div>
+                            <h1 class="main_title2">FAQ</h1>
+                        </div>
+                        <div class="rightBox">
+                            <div class="contentWrap">
+                                <ul class="tabList">
+                                    <li>
+                                        <button type="button" class="item active">지원 과정 안내</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="item">전형 과정 안내</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="item">기타 안내</button>
+                                    </li>
+                                </ul>
+                               <ul class="contentList">
+                                   <li class="active">
+                                        <ul class="qnaList">
+                                            <li class="">
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                        <ul class="qnaList">
+                                            <li class="active">
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? www
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                            <ul class="qnaList">
+                                            <li class="active">
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 333
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="itemWrap">
+                                                    <div class="qBox qnaBox">
+                                                        2개 이상의 공고에 중복 지원이 가능한가요? 
+                                                    </div>
+                                                    <div class="aBox qnaBox">
+                                                        A.중복지원에 대한 제한은 없습니다. 다만 서류 검토 후 가장 적합한 것으로 판단되는 하나의 포지션으로 배치되며,
+                                                        이후 과정부터는 해당 포지션에 한하여 전형이 진행됩니다.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                   </li>
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       </main>
+
+
+       
+        <!--개인정보처리방침-->
+        <section class="privacyPopup" id="privacyPopup">
+            <div class="inner">
+                <div class="contentWrap">
+                    <div class="titleBox">
+                        <span>개인정보 처리방침</span>
+                        <img src="./img/common/close-btn.png" alt="closeBtn" class="closeBtn">
+                    </div>
+                    <div class="contentBox">
+                        해당 홈페이지에 맞는 개인정보처리방침을 입력합니다.           
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- 푸터 시작 { -->
+       <footer>
+            <section class="contentSection">
+                <div class="inner">
+                    <div class="halfBox">
+                        <div class="leftBox">
+                            <img src="./img/header/black_logo.svg" alt="Red Bricks" class="logo" />
+                            <ul class="infoList">
+                                <li>(주)레드브릭스</li>
+                                <li>대표자 : 김광현</li>
+                                <li>대표번호 : 02-338-2799</li>
+                                <li> FAX : 02-6280-2512</li>
+                                <li>E-mail : service@redbricks.co.kr</li>
+                                <li>주소 : 서울 금천구 벚꽃로 254 14층 1414호</li>
+                            </ul>
+                        </div>
+                        <div class="rightBox">
+                            <div class="title">Red Bricks SNS</div>
+                            <ul class="snsList">
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/instagram_icon.svg" alt="인스타그램" class="icon" />
+                                        <div class="snsName">instagram</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/youtube_icon.svg" alt="유튜브" class="icon" />
+                                        <div class="snsName">Youtube</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/instagram_icon.svg" alt="인스타그램" class="icon" />
+                                        <div class="snsName">Project Man</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <img src="./img/footer/youtube_icon.svg" alt="유튜브" class="icon" />
+                                        <div class="snsName">MoodStudio</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bottomSec">
+                <div class="inner">
+                    <a href="#" class="privacy privacyPopupBtn">개인정보 처리방침</a>
+                    <div class="copy_right">ⓒ Red Bricks. All rights reserved</div>
+                </div>
+            </section>
+       </footer>
+       <!-- } 푸터 끝 -->
+
+    </body>
+</html>

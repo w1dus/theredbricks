@@ -12,8 +12,222 @@ document.addEventListener("DOMContentLoaded", function(e){
     positiveSection();
     sub01_1_scrollText();
     sub01_1_circleSec();
-
+    subCircleBoxHalfImgBox();
+    qnaSlideToggle();
+    Sub04_1_progressSec();
+    sub04_1_scroll();
+    QnaToggle();
+    
 })
+
+const QnaToggle = () => {
+    $('.sub04_2 .contentSection .qnaList .qBox').click(function(){
+        $('.sub04_2 .contentSection .qnaList .qBox').not(this).closest('li').removeClass('active');
+        $('.sub04_2 .contentSection .qnaList .qBox').not(this).siblings('.aBox').slideUp();
+        $(this).closest('li').toggleClass('active');
+        $(this).siblings('.aBox').slideToggle();
+    })
+
+    $('.sub04_2 .contentSection .tabList .item').click(function(){
+        const clickNumber = $(this).closest('li').index();
+        $(this).toggleClass('active')
+        $('.sub04_2 .contentSection .tabList .item').removeClass('active');
+        $('.sub04_2 .contentSection .contentList > li').removeClass('active');
+        $('.sub04_2 .contentSection .contentList > li').eq(clickNumber).addClass('active')
+    })
+}
+
+const sub04_1_scroll = () => {
+    const mm = gsap.matchMedia();
+    
+
+    if(document.querySelector(".sub04_1 .pointSec")){
+        mm.add("(min-width: 950px)", () => {
+            // 950px 이상일 때 실행할 애니메이션
+            gsap.to(".sub04_1 .pointSec", {
+              scrollTrigger: {
+                trigger: ".sub04_1 .pointSec",
+                start: "top 0%",
+                end: "+=100%",
+                pin: true,
+                anticipatePin: 1,
+                markers: false,
+                onEnter: () => {
+                  document.querySelector(".sub04_1 .pointSec").classList.add("on");
+                },
+                onEnterBack: () => {
+                  document.querySelector(".sub04_1 .pointSec").classList.add("on");
+                },
+                onLeaveBack: () => {
+                  document.querySelector(".sub04_1 .pointSec").classList.remove("on");
+                },
+              }
+          });
+        
+          gsap.utils.toArray(".sub04_1 .contentSection").forEach((section) => {
+              const inner = section.querySelector(".inner");
+              const contentBox = section.querySelector(".halfBox .contentBox");
+              const imgText = section.querySelector(".imgBox .textBox");
+        
+              gsap.fromTo(
+                contentBox,
+                { y: '30%', opacity: 0 },
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 0.2,
+                  ease: "power2.out",
+                  scrub: true,
+                  scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                  }
+                }
+              );
+        
+              gsap.fromTo(
+                imgText,
+                { y: '100%', opacity: 0 },
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 1.5,
+                  ease: "power2.out",
+                  scrub: true,
+                  scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                  }
+                }
+              );
+        
+              gsap.from(inner, {
+                opacity: 0,
+                y: 0,
+                duration: 0.4,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: section,
+                  start: "top top",
+                  toggleActions: "play reverse play reverse",
+                }
+              });
+        
+              ScrollTrigger.create({
+                trigger: section,
+                start: "top top",
+                end: "+=100%",
+                pin: true,
+                anticipatePin: 1,
+                snap: {
+                  snapTo: 1,
+                  duration: 0.5,
+                  ease: "power1.inOut"
+                },
+                markers: false,
+              });
+            });
+        
+            // 반환할 클린업 함수 (matchMedia가 조건 바뀔 때 자동으로 호출됨)
+            return () => {
+              ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+              // 스타일 초기화 등 필요 시 여기서 처리
+              document.querySelectorAll(".sub04_1 .contentSection .inner").forEach(section => {
+                section.style.position = "static";
+                section.style.top = "0";
+                section.style.left = "0";
+                section.style.opacity = "1";
+              });
+            };
+          });
+      
+          const moAni = () => {
+              gsap.utils.toArray(".sub04_1 .moAni").forEach(elem => {
+                ScrollTrigger.create({
+                  trigger: elem,
+                  start: "top 80%", 
+                  end: "bottom 20%", 
+                  toggleClass: { targets: elem, className: "on" },
+                  once: false, //
+                });
+              });
+          };
+        
+          mm.add("(max-width: 949px)", () => {
+            // 950px 미만일 때 실행할 코드 (애니메이션 해제 및 기본 상태 유지)
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            document.querySelectorAll(".sub04_1 .contentSection .inner").forEach(section => {
+              section.style.position = "static";
+              section.style.top = "0";
+              section.style.left = "0";
+              section.style.opacity = "1";
+            });
+              moAni();
+          });
+    }
+    
+    
+    window.addEventListener('resize', ScrollTrigger.update);
+};
+
+const Sub04_1_progressSec = () => {
+    // .sub04_1 .progressSec .t1 .text
+    gsap.to(".sub04_1 .progressSec .t1 .text", {
+        xPercent: -100,
+        ease: "none",
+        duration: 15,
+        repeat: -1,
+        modifiers: {
+          yPercent: gsap.utils.wrap(-100, 0)
+        }
+    });
+
+    $('.sub04_1 .progressSec .progressBox .number').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo
+        },
+        {
+          duration: 3000,
+          easing:'linear',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+        });  
+    });
+
+}
+
+const qnaSlideToggle = () => {
+    $('.sub02_4 .qnaSec .halfBox .qnaList .qBox').click(function(){
+        $(this).parent('li').toggleClass('on')
+        $(this).siblings('.aBox').slideToggle();
+    })
+}
+
+
+const subCircleBoxHalfImgBox = () => {
+    $(document).ready(function () {
+        const $images = $('.sub02 .circleWrap .content');
+        let current = 0;
+        setInterval(function () {
+          // 모든 이미지에서 'on' 클래스 제거
+          $images.removeClass('on');
+          // 현재 이미지에 'on' 클래스 추가
+          $images.eq(current).addClass('on');
+          // 다음 이미지로 인덱스 이동
+          current = (current + 1) % $images.length;
+        }, 2000); // 2초 간격
+      });
+}
 
 const sub01_1_circleSec = () => {
     gsap.to(".sub01_1 .circleSec", {
@@ -41,7 +255,7 @@ const sub01_1_circleSec = () => {
         }
       }
     });
-  };
+};
 
   
 // const sub01_1_circleSec = () => {
@@ -295,7 +509,7 @@ const pcMenuSlide = () => {
 
     // header 전체에서 마우스가 벗어나면
     header.on('mouseleave', function () {
-        header.removeClass('on');
+        header.removeClass(' on');
         $('header .subMenu').stop(true, true).slideUp();
     });
 }

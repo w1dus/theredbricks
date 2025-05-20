@@ -55,9 +55,9 @@ const headerScrollHandler = () => {
         document.addEventListener("scroll", function(){
             let scroll_top = window.scrollY;
             if(scroll_top > 0){
-                header_main.classList.add("on");
+                header_main.classList.add("whiteBg");
             }else{
-                header_main.classList.remove("on");
+                header_main.classList.remove("whiteBg");
             }
         })
     }

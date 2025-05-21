@@ -111,15 +111,15 @@ header .slideMenuBtn{ background: transparent; position: fixed; right: 4vw; top:
 
 /* footer */
 footer{ border-top: 1px solid #E4E4E4; }
-footer .contentSection{ padding: 60px 0; }
+footer .contentBox{ padding: 60px 0; }
 footer .logo{ width: 218px; }
-footer .contentSection .halfBox{ display: flex; align-items: center; justify-content: space-between; }
-footer .contentSection .leftBox .infoList{ max-width: 700px; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-footer .contentSection .leftBox .infoList > li{ margin-right: 10px;  }
-footer .contentSection .rightBox .title{ text-align: right; font-weight: 500; }
-footer .contentSection .rightBox .snsList{ margin-top: 10px; display: flex; gap: 30px; }
-footer .contentSection .rightBox .snsList > li img{ margin: 0 auto; display: block;  }
-footer .contentSection .rightBox .snsList > li .snsName{ margin-top: 10px; text-align: center; }
+footer .contentBox .halfBox{ display: flex; align-items: center; justify-content: space-between; }
+footer .contentBox .leftBox .infoList{ max-width: 700px; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+footer .contentBox .leftBox .infoList > li{ margin-right: 10px;  }
+footer .contentBox .rightBox .title{ text-align: right; font-weight: 500; }
+footer .contentBox .rightBox .snsList{ margin-top: 10px; display: flex; gap: 30px; }
+footer .contentBox .rightBox .snsList > li img{ margin: 0 auto; display: block;  }
+footer .contentBox .rightBox .snsList > li .snsName{ margin-top: 10px; text-align: center; }
 footer .bottomSec{ border-top: 1px solid #E4E4E4; padding: 20px 0; }
 footer .bottomSec .inner{ display: flex; align-items: center; justify-content: space-between; }
 footer .bottomSec .privacy{ font-weight: 500; }
@@ -127,23 +127,23 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 
 @media screen and (max-width: 1250px) { 
     footer .logo{ width: auto; }
-    footer .contentSection .rightBox .snsList { gap: 15px; }
-    footer .contentSection .rightBox .snsList > li img{ width: 40px; }
-    footer .contentSection .rightBox .snsList > li .snsName{ font-size: 14px; }
+    footer .contentBox .rightBox .snsList { gap: 15px; }
+    footer .contentBox .rightBox .snsList > li img{ width: 40px; }
+    footer .contentBox .rightBox .snsList > li .snsName{ font-size: 14px; }
 }
 @media screen and (max-width: 950px) { 
     footer{ font-size: 14px; }
-    footer .contentSection .halfBox{ flex-direction: column; align-items: flex-start; gap: 40px; }
-    footer .contentSection .rightBox .title{ text-align: left; }
+    footer .contentBox .halfBox{ flex-direction: column; align-items: flex-start; gap: 40px; }
+    footer .contentBox .rightBox .title{ text-align: left; }
 
-    footer .contentSection .rightBox .snsList{ margin-top: 10px; }
-    footer .contentSection .rightBox .snsList > li img{ width: 30px; }
-    footer .contentSection .rightBox .snsList > li .snsName{ font-size: 13px; margin-top: 2px; }
+    footer .contentBox .rightBox .snsList{ margin-top: 10px; }
+    footer .contentBox .rightBox .snsList > li img{ width: 30px; }
+    footer .contentBox .rightBox .snsList > li .snsName{ font-size: 13px; margin-top: 2px; }
     footer .bottomSec .copy_right{ font-size: 12px; } 
 }
 @media screen and (max-width: 650px) { 
     footer .logo{ width: 120px; }
-    footer .contentSection .halfBox{ gap: 20px; }
+    footer .contentBox .halfBox{ gap: 20px; }
 }
 
 /* 개인정보처리방침 , 이용약관 팝업 */

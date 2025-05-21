@@ -965,11 +965,11 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 
 /* .sub04_1 .progressSec */
 .sub04_1 .progressSec{ display: flex; flex-direction: column; color:#fff; position: relative; overflow: hidden; background: linear-gradient(270deg, rgba(151, 33, 52, 0.00) 0%, #972134 106.3%), #CD354E; min-height: 100vh; padding: 20vh 0 10vh 0; }
-.sub04_1 .progressSec .t1{ display: flex; font-size: 120px; font-weight: 700; white-space: nowrap; gap: 50px; }
+.sub04_1 .progressSec .t1{ display: flex; font-size: 11vw; font-weight: 700; white-space: nowrap; gap: 50px; }
 .sub04_1 .progressSec .inner{ flex-grow: 1; display: flex; flex-direction: column; }
 .sub04_1 .progressSec .t2{ flex-grow: 1; margin-top: 17px; font-size: 24px; font-weight: 700;  }
 .sub04_1 .progressSec .progressBox{ display: flex; align-items: center; gap: 10px; }
-.sub04_1 .progressSec .barBox{ width: 0; animation: progress_bar ease-in-out 4s forwards; display: flex; }
+.sub04_1 .progressSec .barBox{ width: 0; animation: progress_bar ease-in-out 1.5s forwards; display: flex; }
 .sub04_1 .progressSec .barBox .bar{ width: 100%; height: 2px; background-color: #fff; }
 .sub04_1 .progressSec .barBox .count{ flex-shrink: 0; font-size: 40px; font-weight: 700; }
 .sub04_1 .progressSec .progressBox .count{ font-size: 40px; font-weight: 700; }

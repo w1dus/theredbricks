@@ -29,6 +29,9 @@ select{
 }
 select::-ms-expand{ display:none; }
 
+html::-webkit-scrollbar {width: 8px;}
+html::-webkit-scrollbar-thumb {background-color: #CD354E; border-radius: 10px;}
+
 @media screen and (max-width: 1250px) { 
     .inner{ width:100%; padding:0 4vw; }
 } /* tablet */

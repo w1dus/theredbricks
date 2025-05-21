@@ -16,6 +16,8 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script type="text/javascript" src="./script/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <!--폰트-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,452 +127,454 @@
        <!-- } 헤더 끝 -->
 
      
-       <main class="main">
-            <section class="visualSec ani">
-                <div class="videoBg">
-                        <div data-vbg-autoplay="true" data-vbg="https://youtu.be/r9pbtgGky4g?si=TM0TeUlOeYWGBWoy"></div>
-                </div>
-                <div class="inner">
-                        <div class="t1">우리는 브랜드의 가능성을 믿습니다</div>
-                        <div class="t2">
-                            Red Bricks는 마케팅으로 <br/>
-                            브랜드가 자라나는 환경을 만듭니다.
-                        </div>
-                </div>
-            </section>
-            <section class="aboutSec ani">
-                <div class="inner">
-                    <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
-                    <div class="main_title2">지속적인 성장과 신뢰의 여정</div>
-                    <div class="content">
-                            15년의 경험, 300여 개 이상의 고객사와 함께한 여정
+       <main id="smooth-wrapper" class="main">
+           <article class="smooth-content">
+                <section class="visualSec ani">
+                    <div class="videoBg">
+                            <div data-vbg-autoplay="true" data-vbg="https://youtu.be/r9pbtgGky4g?si=TM0TeUlOeYWGBWoy"></div>
                     </div>
+                    <div class="inner">
+                            <div class="t1">우리는 브랜드의 가능성을 믿습니다</div>
+                            <div class="t2">
+                                Red Bricks는 마케팅으로 <br/>
+                                브랜드가 자라나는 환경을 만듭니다.
+                            </div>
+                    </div>
+                </section>
+                <section class="aboutSec ani">
+                    <div class="inner">
+                        <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
+                        <div class="main_title2">지속적인 성장과 신뢰의 여정</div>
+                        <div class="content">
+                                15년의 경험, 300여 개 이상의 고객사와 함께한 여정
+                        </div>
 
-                    <ul class="circle_list">
-                        <li>
-                            <div class="circle redBg"><span class="title"><b class="white_circle"><span class="barWrap"></span></b>회사소개</span></div>
-                        </li>
-                        <li>
-                                <div class="circle grayBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>서비스 소개</span></div>
+                        <ul class="circle_list">
+                            <li>
+                                <div class="circle redBg"><span class="title"><b class="white_circle"><span class="barWrap"></span></b>회사소개</span></div>
                             </li>
                             <li>
-                                <div class="circle mintBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>바우처 사업</span></div>
-                            </li>
-                    </ul>
-                </div>
-                <div class="bottomBox">
-                        <div class="grayBg">
-                            <div class="box">
-                                <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
-                                <div class="main_title2"><span class="count" data-count="82.4">0</span>%</div>
-                                <div class="info">2026.01.16 설립</div>
-                            </div>
-                            <div class="box">
-                                <div class="main_title1">설립일</div>
-                                <div class="main_title2"><span class="count" data-count="2006">0</span></div>
-                                <div class="info">2026.01.16 설립</div>
-                            </div>
-                            <div class="box">
-                                <div class="main_title1">설립일</div>
-                                <div class="main_title2"><span class="count" data-count="2006">0</span></div>
-                                <div class="info">2026.01.16 설립</div>
-                            </div>
-                        </div>
+                                    <div class="circle grayBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>서비스 소개</span></div>
+                                </li>
+                                <li>
+                                    <div class="circle mintBg"><span class="title"><b class="white_circle"><span class="barWrap"><p class="bar"></p></span></b>바우처 사업</span></div>
+                                </li>
+                        </ul>
                     </div>
-            </section>
-            <section class="paralSlideSection">
-                <div class="hiddenWrap">
-                    <div class="inner">
-                        <div class="titleBox">
-                            <div class="main_title2">Portfolio</div>
-                            <a href="#" class="moreBtn">View more +</a>
+                    <div class="bottomBox">
+                            <div class="grayBg">
+                                <div class="box">
+                                    <div class="main_title1">기획부터 콘텐츠, 마케팅까지</div>
+                                    <div class="main_title2"><span class="count" data-count="82.4">0</span>%</div>
+                                    <div class="info">2026.01.16 설립</div>
+                                </div>
+                                <div class="box">
+                                    <div class="main_title1">설립일</div>
+                                    <div class="main_title2"><span class="count" data-count="2006">0</span></div>
+                                    <div class="info">2026.01.16 설립</div>
+                                </div>
+                                <div class="box">
+                                    <div class="main_title1">설립일</div>
+                                    <div class="main_title2"><span class="count" data-count="2006">0</span></div>
+                                    <div class="info">2026.01.16 설립</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slideBox">
-                        <div class="pnBtnWrap">
-                            <button type="button" class="pnBtn prevBtn">
-                                <img src="./img/main/paralSlideSection/prev_btn.svg" class="icon" alt="이전" />
-                            </button>
-                            <button type="button" class="pnBtn nextBtn">
-                                <img src="./img/main/paralSlideSection/next_btn.svg" class="icon" alt="다음" />
-                            </button>
+                </section>
+                <section class="paralSlideSection">
+                    <div class="hiddenWrap">
+                        <div class="inner">
+                            <div class="titleBox">
+                                <div class="main_title2">Portfolio</div>
+                                <a href="#" class="moreBtn">View more +</a>
+                            </div>
                         </div>
+                        <div class="slideBox">
+                            <div class="pnBtnWrap">
+                                <button type="button" class="pnBtn prevBtn">
+                                    <img src="./img/main/paralSlideSection/prev_btn.svg" class="icon" alt="이전" />
+                                </button>
+                                <button type="button" class="pnBtn nextBtn">
+                                    <img src="./img/main/paralSlideSection/next_btn.svg" class="icon" alt="다음" />
+                                </button>
+                            </div>
 
-                        <div class="slideWrap">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <div class="item">
-                                                <div class="imgBox">
-                                                    <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
-                                                </div>
-                                                <div class="slideTitle">
-                                                    <div class="title">
-                                                        밀리의 서재 바이럴 마케팅 진행
+                            <div class="slideWrap">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="item">
+                                                    <div class="imgBox">
+                                                        <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
                                                     </div>
-                                                    <div class="count">
-                                                        <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <div class="item">
-                                                <div class="imgBox">
-                                                    <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
-                                                </div>
-                                                <div class="slideTitle">
-                                                    <div class="title">
-                                                        밀리의 서재 바이럴 마케팅 진행
-                                                    </div>
-                                                    <div class="count">
-                                                        <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                    <div class="slideTitle">
+                                                        <div class="title">
+                                                            밀리의 서재 바이럴 마케팅 진행
+                                                        </div>
+                                                        <div class="count">
+                                                            <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <div class="item">
-                                                <div class="imgBox">
-                                                    <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
-                                                </div>
-                                                <div class="slideTitle">
-                                                    <div class="title">
-                                                        밀리의 서재 바이럴 마케팅 진행
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="item">
+                                                    <div class="imgBox">
+                                                        <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
                                                     </div>
-                                                    <div class="count">
-                                                        <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <div class="item">
-                                                <div class="imgBox">
-                                                    <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
-                                                </div>
-                                                <div class="slideTitle">
-                                                    <div class="title">
-                                                        밀리의 서재 바이럴 마케팅 진행
-                                                    </div>
-                                                    <div class="count">
-                                                        <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                    <div class="slideTitle">
+                                                        <div class="title">
+                                                            밀리의 서재 바이럴 마케팅 진행
+                                                        </div>
+                                                        <div class="count">
+                                                            <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <div class="item">
-                                                <div class="imgBox">
-                                                    <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
-                                                </div>
-                                                <div class="slideTitle">
-                                                    <div class="title">
-                                                        밀리의 서재 바이럴 마케팅 진행
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="item">
+                                                    <div class="imgBox">
+                                                        <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
                                                     </div>
-                                                    <div class="count">
-                                                        <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                    <div class="slideTitle">
+                                                        <div class="title">
+                                                            밀리의 서재 바이럴 마케팅 진행
+                                                        </div>
+                                                        <div class="count">
+                                                            <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </a>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="item">
+                                                    <div class="imgBox">
+                                                        <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
+                                                    </div>
+                                                    <div class="slideTitle">
+                                                        <div class="title">
+                                                            밀리의 서재 바이럴 마케팅 진행
+                                                        </div>
+                                                        <div class="count">
+                                                            <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="item">
+                                                    <div class="imgBox">
+                                                        <div class="realImg" style="background-image: url('./img/main/paralSlideSection/example.png');"></div>
+                                                    </div>
+                                                    <div class="slideTitle">
+                                                        <div class="title">
+                                                            밀리의 서재 바이럴 마케팅 진행
+                                                        </div>
+                                                        <div class="count">
+                                                            <span class="now">01</span><span class="gray"> / <b class="total">02</b></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="bar"></div>
                     </div>
-                    <div class="bar"></div>
-                </div>
-            </section>
-            <section class="logoSlideSec">
-                <!--관리자 등록-->
-                <article class="logoWrap">
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                    <ul class="logoList">
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                        <li>
-                            <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
-                        </li>
-                    </ul>
-                </article>
-                <div class="inner">
-                    <div class="contentWrap">
-                        <div class="title1">수많은 기업이 레드브릭스를 통해<br/>마케팅의 시작을 성공적으로 내딛었습니다. </div>
-                        <div class="btnWrap">
-                            <a href="#" class="item">바로 문의하기</a>
-                            <a href="#" class="item redBg">포트폴리오 보기</a>
+                </section>
+                <section class="logoSlideSec">
+                    <!--관리자 등록-->
+                    <article class="logoWrap">
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                        <ul class="logoList">
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                            <li>
+                                <img src="./img/main/logoSlideSec/example.png" alt="로고" class="logo" />
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="inner">
+                        <div class="contentWrap">
+                            <div class="title1">수많은 기업이 레드브릭스를 통해<br/>마케팅의 시작을 성공적으로 내딛었습니다. </div>
+                            <div class="btnWrap">
+                                <a href="#" class="item">바로 문의하기</a>
+                                <a href="#" class="item redBg">포트폴리오 보기</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="howRedBricksSection">
-                <ul class="textList">
-                    <li>
-                        <div class="textBox redBg"> <span class="circle"></span> How Red Bricks Work? <span class="circle"></span> </div>
-                    </li>
-                    <li>
-                        <div class="textBox mintBg"> <span class="circle"></span> How Red Bricks Work? <span class="circle"></span> </div>
-                    </li>
-                </ul>
-            </section>
-            <section class="quadrangleSection">
-                <div class="inner">
-                    <div class="halfBox">
-                        <div class="box">
-                            <a href="#" class="imgItem">
-                                <img src="./img/main/quadrangleSection/img.jpg" alt="배경이미지" class="background" />
-                                <div class="contentBox">
-                                    <div class="t1">Red Bricks 인터뷰</div>
-                                    <div class="viewMore">
-                                        <span class="txt">View more</span>
-                                        <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                </section>
+                <section class="howRedBricksSection">
+                    <ul class="textList">
+                        <li>
+                            <div class="textBox redBg"> <span class="circle"></span> How Red Bricks Work? <span class="circle"></span> </div>
+                        </li>
+                        <li>
+                            <div class="textBox mintBg"> <span class="circle"></span> How Red Bricks Work? <span class="circle"></span> </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="quadrangleSection">
+                    <div class="inner">
+                        <div class="halfBox">
+                            <div class="box">
+                                <a href="#" class="imgItem">
+                                    <img src="./img/main/quadrangleSection/img.jpg" alt="배경이미지" class="background" />
+                                    <div class="contentBox">
+                                        <div class="t1">Red Bricks 인터뷰</div>
+                                        <div class="viewMore">
+                                            <span class="txt">View more</span>
+                                            <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
+                            </div>
+                            <div class="box">
+                                <ul class="itemList">
+                                    <li>
+                                        <a href="#">
+                                            <div class="item">
+                                                <div class="title">일상을 더 소중하게 </div>
+                                                <div class="content">
+                                                    마지막 수요일은 오전 근무만
+                                                </div>
+                                                <div class="viewMore">
+                                                    <span class="txt">View more</span>
+                                                    <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="item">
+                                                <div class="title">오직 레드브릭스를 위한 </div>
+                                                <div class="content">
+                                                    DB Day와 유연근무제 도입
+                                                </div>
+                                                <div class="viewMore">
+                                                    <span class="txt">View more</span>
+                                                    <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="item">
+                                                <div class="title">레드브릭스에 오신걸 환영해요 </div>
+                                                <div class="content">
+                                                    2개월에 한번씩 회사 업무를 내려 놓고 <br/>떠나는 맛집 탐방
+                                                </div>
+                                                <div class="viewMore">
+                                                    <span class="txt">View more</span>
+                                                    <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="item">
+                                                <div class="title">일상을 더 소중하게 </div>
+                                                <div class="content">
+                                                    건강과 편리를 고려한 다정한 사무 공간
+                                                </div>
+                                                <div class="viewMore">
+                                                    <span class="txt">View more</span>
+                                                    <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="blackBtn">Red Bricks 자세히보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="positiveSection">
+                    <div class="bgDiv" style="background-image: url('./img/main/positiveSection/background.jpg');"></div>
+                    <div class="blackBg"></div>
+                    <div class="inner">
+                        <div class="contentWrap">
+                            <div class="titleWrap">
+                                <span class="mint mint1">P</span><span class="front">o</span><span>s</span><span>t</span><span>i</span><span>v</span><span>e</span>
+                                <span class="red red1">I</span><span class="front front_m">m</span><span>p</span><span>a</span><span>c</span><span>t</span><br/>
+                                <span class="mint mint2">R</span><span class="front">e</span><span>a</span><span>l</span>
+                                <span class="red red2">G</span><span class="front rfront">r</span><span>o</span><span>t</span><span>h</span>
+                            </div>
+                            <div class="content">
+                                데이터 기반 전략과 크리에이티브로 <br/>
+                                브랜드와 고객 모두에게 긍정적인 영향을 만듭니다.
+                            </div>
+                            <a href="./sub01_1.html" class="moreBtn">
+                                <img src="./img/main/positiveSection/icon.svg" alt="자세히보기" class="icon" />
                             </a>
                         </div>
-                        <div class="box">
-                            <ul class="itemList">
-                                <li>
-                                    <a href="#">
-                                        <div class="item">
-                                            <div class="title">일상을 더 소중하게 </div>
-                                            <div class="content">
-                                                마지막 수요일은 오전 근무만
-                                            </div>
-                                            <div class="viewMore">
-                                                <span class="txt">View more</span>
-                                                <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="item">
-                                            <div class="title">오직 레드브릭스를 위한 </div>
-                                            <div class="content">
-                                                DB Day와 유연근무제 도입
-                                            </div>
-                                            <div class="viewMore">
-                                                <span class="txt">View more</span>
-                                                <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="item">
-                                            <div class="title">레드브릭스에 오신걸 환영해요 </div>
-                                            <div class="content">
-                                                2개월에 한번씩 회사 업무를 내려 놓고 <br/>떠나는 맛집 탐방
-                                            </div>
-                                            <div class="viewMore">
-                                                <span class="txt">View more</span>
-                                                <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="item">
-                                            <div class="title">일상을 더 소중하게 </div>
-                                            <div class="content">
-                                                건강과 편리를 고려한 다정한 사무 공간
-                                            </div>
-                                            <div class="viewMore">
-                                                <span class="txt">View more</span>
-                                                <img src="./img/main/quadrangleSection/more_btn.svg" alt="더보기" class="icon" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" class="blackBtn">Red Bricks 자세히보기</a>
-                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="positiveSection">
-                <div class="bgDiv" style="background-image: url('./img/main/positiveSection/background.jpg');"></div>
-                <div class="blackBg"></div>
-                <div class="inner">
-                    <div class="contentWrap">
-                        <div class="titleWrap">
-                            <span class="mint mint1">P</span><span class="front">o</span><span>s</span><span>t</span><span>i</span><span>v</span><span>e</span>
-                            <span class="red red1">I</span><span class="front front_m">m</span><span>p</span><span>a</span><span>c</span><span>t</span><br/>
-                            <span class="mint mint2">R</span><span class="front">e</span><span>a</span><span>l</span>
-                            <span class="red red2">G</span><span class="front rfront">r</span><span>o</span><span>t</span><span>h</span>
-                        </div>
-                        <div class="content">
-                            데이터 기반 전략과 크리에이티브로 <br/>
-                            브랜드와 고객 모두에게 긍정적인 영향을 만듭니다.
-                        </div>
-                        <a href="./sub01_1.html" class="moreBtn">
-                            <img src="./img/main/positiveSection/icon.svg" alt="자세히보기" class="icon" />
-                        </a>
-                    </div>
-                </div>
-            </section>
+                </section>
+           </article>
        </main>
 
 

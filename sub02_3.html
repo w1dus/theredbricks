@@ -16,6 +16,8 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script type="text/javascript" src="./script/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <!--폰트-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,80 +127,82 @@
        <!-- } 헤더 끝 -->
 
      
-       <main class="sub sub02 sub02_3">
-            <section class="subBannerSec" style="background-image: url('./img/sub/sub02_3/background.jpg');">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="inner">
-                    <div class="t1">Content Design Service</div>
-                    <h1 class="t2">크리에이티브 미디어 콘텐츠</h1>
-                    <div class="content">
-                        도전적인 크리에이터와 트렌디한 PD들의 협업으로 <br/>
-                        감각적인 최고의 결과물을 만들어 냅니다.
+       <main id="smooth-wrapper" class="sub sub02 sub02_3">
+            <article class="smooth-content">
+                <section class="subBannerSec" style="background-image: url('./img/sub/sub02_3/background.jpg');">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="inner">
+                        <div class="t1">Content Design Service</div>
+                        <h1 class="t2">크리에이티브 미디어 콘텐츠</h1>
+                        <div class="content">
+                            도전적인 크리에이터와 트렌디한 PD들의 협업으로 <br/>
+                            감각적인 최고의 결과물을 만들어 냅니다.
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="contentTitleSec">
-                <div class="inner">
-                    <div class="subTitle">
-                        브랜드를 움직이는 콘텐츠,<br/>
-                        경험을 완성하는 전문가들
+                </section>
+                <section class="contentTitleSec">
+                    <div class="inner">
+                        <div class="subTitle">
+                            브랜드를 움직이는 콘텐츠,<br/>
+                            경험을 완성하는 전문가들
+                        </div>
+                        <div class="subContent">
+                            레드브릭스는 브랜드의 메시지를 깊이 있게 이해하고,<br/> 타겟과 소통하는 영상·미디어 콘텐츠로 효과적인 결과를 만듭니다.
+                        </div>
                     </div>
-                    <div class="subContent">
-                        레드브릭스는 브랜드의 메시지를 깊이 있게 이해하고,<br/> 타겟과 소통하는 영상·미디어 콘텐츠로 효과적인 결과를 만듭니다.
+                </section>
+                <section class="halfImgBox">
+                    <div class="imgBox">
+                        <img class="imgBg" style="background-image: url('./img/sub/sub02_3/background2.jpg');" />
+                    </div>  
+                    <div class="circleWrap">
+                        <img src="./img/sub/sub02_3/circle1.svg" alt="SNS 콘텐츠 디자인" class="content content1" />
+                        <img src="./img/sub/sub02_3/circle2.svg" alt="광고 홍보물 디자인" class="content content2" />
+                        <img src="./img/sub/sub02_3/circle3.svg" alt="e-브로슈어 디자인" class="content content3" />
+                        <img src="./img/sub/sub02_3/circle4.svg" alt="브랜드 UX/UI 디자인" class="content content4" />
                     </div>
-                </div>
-            </section>
-            <section class="halfImgBox">
-                <div class="imgBox">
-                    <img class="imgBg" style="background-image: url('./img/sub/sub02_3/background2.jpg');" />
-                </div>  
-                <div class="circleWrap">
-                    <img src="./img/sub/sub02_3/circle1.svg" alt="SNS 콘텐츠 디자인" class="content content1" />
-                    <img src="./img/sub/sub02_3/circle2.svg" alt="광고 홍보물 디자인" class="content content2" />
-                    <img src="./img/sub/sub02_3/circle3.svg" alt="e-브로슈어 디자인" class="content content3" />
-                    <img src="./img/sub/sub02_3/circle4.svg" alt="브랜드 UX/UI 디자인" class="content content4" />
-                </div>
-            </section>
-            <section class="contentListSec">
-                <div class="inner">
-                    <h1 class="main_title2">성과를 이끄는 콘텐츠</h1>
-                    <ul class="contents_list">
-                        <li>
-                            <a href="#">
-                                <div class="item">
-                                    <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex1.jpg');"></div></div>
-                                    <div class="title">강화루지 SNS 매체 운영 및 콘텐츠 제작</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="item">
-                                    <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex2.jpg');"></div></div>
-                                    <div class="title">CCTV 관재센터 홍보영상</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="item">
-                                    <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex3.jpg');"></div></div>
-                                    <div class="title">버터샵 SNS 매체 운영 및 바이럴 마케팅 진행</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="item">
-                                    <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex4.jpg');"></div></div>
-                                    <div class="title">코웨이 직무소개 영상 제작</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                </section>
+                <section class="contentListSec">
+                    <div class="inner">
+                        <h1 class="main_title2">성과를 이끄는 콘텐츠</h1>
+                        <ul class="contents_list">
+                            <li>
+                                <a href="#">
+                                    <div class="item">
+                                        <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex1.jpg');"></div></div>
+                                        <div class="title">강화루지 SNS 매체 운영 및 콘텐츠 제작</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="item">
+                                        <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex2.jpg');"></div></div>
+                                        <div class="title">CCTV 관재센터 홍보영상</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="item">
+                                        <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex3.jpg');"></div></div>
+                                        <div class="title">버터샵 SNS 매체 운영 및 바이럴 마케팅 진행</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="item">
+                                        <div class="imgBox"><div class="imgBg" style="background-image: url('./img/sub/sub02_1/ex4.jpg');"></div></div>
+                                        <div class="title">코웨이 직무소개 영상 제작</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
        </main>
 
 

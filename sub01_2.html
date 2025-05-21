@@ -16,6 +16,8 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script type="text/javascript" src="./script/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <!--폰트-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,82 +127,84 @@
        <!-- } 헤더 끝 -->
 
      
-       <main class="sub sub01 sub01_2">
-            <section class="topBannerSec">
-                <img src="./img/sub/topBannerSec/circle2.png" alt="Red Bricks" class="circle circle2" />
-                <div class="inner">
-                    <img src="./img/sub/topBannerSec/circle1.png" alt="Red Bricks" class="circle circle1" />
-                    <div class="title">Contact</div>
-                </div>
-            </section>
-            <section class="applySec">
-                <div class="inner">
-                    <div class="titleBox">
-                        <img src="./img/sub/sub01_2/logo.jpg" alt="레드브릭스" class="icon" />
-                        <div class="title">레드브릭스 문의하기</div>
+       <main id="smooth-wrapper" class="sub sub01 sub01_2">
+            <article class="smooth-content">
+                <section class="topBannerSec">
+                    <img src="./img/sub/topBannerSec/circle2.png" alt="Red Bricks" class="circle circle2" />
+                    <div class="inner">
+                        <img src="./img/sub/topBannerSec/circle1.png" alt="Red Bricks" class="circle circle1" />
+                        <div class="title">Contact</div>
                     </div>
-                    <ul class="formList">
-                        <li class="half">
-                            <div class="label">기관 혹은 기업 명</div>
-                            <div class="iptBox">
-                                <input type="text" placeholder="" value="" class="ipt" />
-                            </div>
-                        </li>
-                        <li class="half">
-                            <div class="label">성함</div>
-                            <div class="iptBox">
-                                <input type="text" placeholder="" value="" class="ipt" />
-                            </div>
-                        </li>
-                        <li class="half">
-                            <div class="label">연락처</div>
-                            <div class="iptBox">
-                                <input type="text" placeholder="" value="" class="ipt" />
-                            </div>
-                        </li>
-                        <li class="half">
-                            <div class="label">이메일</div>
-                            <div class="iptBox">
-                                <input type="text" placeholder="" value="" class="ipt" />
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="agreeDiv agreeCheckDiv">
-                        <label>
-                            <input type="checkbox"/>
-                            <div class="textBox"><span class="loginblue">개인정보처리방침의 내용에 동의합니다.</div>
-                        </label>
-                    </div>
-                    <button type="button" class="submitBtn">상담 신청하기</button>
-                </div>
-            </section>
-            <section class="halfSec">
-                <div class="inner">
-                    <article class="halfBox">
-                        <div class="box"><div class="title">서울시 금천구 벚꽃로 254 월드메르디앙 1차 1414호</div></div>
-                        <div class="box">
-                            <div class="title">대표 연락처</div>
-                            <ul class="company_list">
-                                <li>
-                                    <div class="gray">TEL</div>
-                                    <div class="content"><a href="tel:02 388 2799">02 388 2799</a></div>
-                                </li>
-                                <li>
-                                    <div class="gray">FAX</div>
-                                    <div class="content"><a href="tel:02 6280 2512">02 6280 2512</a></div>
-                                </li>
-                                <li>
-                                    <div class="gray">E-MAIL</div>
-                                    <div class="content"><a href="mailto:service@redbricks.co.kr">service@redbricks.co.kr</a></div>
-                                </li>
-                            </ul>
+                </section>
+                <section class="applySec">
+                    <div class="inner">
+                        <div class="titleBox">
+                            <img src="./img/sub/sub01_2/logo.jpg" alt="레드브릭스" class="icon" />
+                            <div class="title">레드브릭스 문의하기</div>
                         </div>
-                    </article>
-                    <article class="mapArti">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.280644150834!2d126.88546079999999!3d37.4777032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61e23f83f083%3A0xb8e85f88ca6b91fb!2z66CI65Oc67iM66at7Iqk!5e0!3m2!1sko!2skr!4v1747278186106!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </article>
-                </div>
-            </section>
+                        <ul class="formList">
+                            <li class="half">
+                                <div class="label">기관 혹은 기업 명</div>
+                                <div class="iptBox">
+                                    <input type="text" placeholder="" value="" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="half">
+                                <div class="label">성함</div>
+                                <div class="iptBox">
+                                    <input type="text" placeholder="" value="" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="half">
+                                <div class="label">연락처</div>
+                                <div class="iptBox">
+                                    <input type="text" placeholder="" value="" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="half">
+                                <div class="label">이메일</div>
+                                <div class="iptBox">
+                                    <input type="text" placeholder="" value="" class="ipt" />
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="agreeDiv agreeCheckDiv">
+                            <label>
+                                <input type="checkbox"/>
+                                <div class="textBox"><span class="loginblue">개인정보처리방침의 내용에 동의합니다.</div>
+                            </label>
+                        </div>
+                        <button type="button" class="submitBtn">상담 신청하기</button>
+                    </div>
+                </section>
+                <section class="halfSec">
+                    <div class="inner">
+                        <article class="halfBox">
+                            <div class="box"><div class="title">서울시 금천구 벚꽃로 254 월드메르디앙 1차 1414호</div></div>
+                            <div class="box">
+                                <div class="title">대표 연락처</div>
+                                <ul class="company_list">
+                                    <li>
+                                        <div class="gray">TEL</div>
+                                        <div class="content"><a href="tel:02 388 2799">02 388 2799</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="gray">FAX</div>
+                                        <div class="content"><a href="tel:02 6280 2512">02 6280 2512</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="gray">E-MAIL</div>
+                                        <div class="content"><a href="mailto:service@redbricks.co.kr">service@redbricks.co.kr</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="mapArti">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.280644150834!2d126.88546079999999!3d37.4777032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61e23f83f083%3A0xb8e85f88ca6b91fb!2z66CI65Oc67iM66at7Iqk!5e0!3m2!1sko!2skr!4v1747278186106!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </article>
+                    </div>
+                </section>
+            </article>
        </main>
 
 

@@ -16,6 +16,8 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script type="text/javascript" src="./script/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <!--폰트-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,7 +127,8 @@
        <!-- } 헤더 끝 -->
 
      
-       <main class="sub sub02 sub02_1">
+       <main id="smooth-wrapper" class="sub sub02 sub02_1">
+        <article class="smooth-content">
             <section class="subBannerSec" style="background-image: url('./img/sub/sub02_1/background.jpg');">
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
@@ -201,6 +204,7 @@
                     </ul>
                 </div>
             </section>
+        </article>
        </main>
 
 

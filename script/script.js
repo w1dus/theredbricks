@@ -81,7 +81,7 @@ const sub04_1_scroll = () => {
                   scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: "bottom top",
+                    end: "bottom 50%",
                     scrub: true,
                   }
                 }

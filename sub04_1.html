@@ -16,6 +16,8 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script type="text/javascript" src="./script/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <!--폰트-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,160 +127,162 @@
        <!-- } 헤더 끝 -->
 
      
-       <main class="sub sub02 sub04_1">
-            <section class="progressSec">
-                <div class="t1">
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                    <div class="text">How Red Bricks Work ?</div>
-                </div>
-                <div class="inner">
-                    <div class="t2">레드브릭스가 일하는 방법</div>
-                    <div class="progressBox">
-                        <div class="barBox">
-                            <div class="bar"></div>
-                        </div>
-                        <div class="count"><span class="number" data-count="100">0</span>%</div>
+       <main id="smooth-wrapper" class="sub sub02 sub04_1">
+            <article class="smooth-content">
+                <section class="progressSec">
+                    <div class="t1">
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
+                        <div class="text">How Red Bricks Work ?</div>
                     </div>
-                </div>
-            </section>
-            <section class="pointSec moAni">
-                <div class="inner">
-                    <div class="t1">핵심가치</div>
-                    <div class="t2">레드브릭스는 어떻게 일할까요 ? </div>
-                </div>
-            </section>
-            <section class="contentSection moAni">
-                <div class="inner">
-                    <div class="halfBox">
-                        <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
-                            <div class="bgCover"></div>
-                            <div class="textBox">
-                                <div class="t1">01</div>
-                                <div class="t2">One Brocks, One Goal!</div>
-                                <div class="t3">우리는 공동의 미션과 비전을 향해 자발적이고 주도적으로 협업합니다.</div>
+                    <div class="inner">
+                        <div class="t2">레드브릭스가 일하는 방법</div>
+                        <div class="progressBox">
+                            <div class="barBox">
+                                <div class="bar"></div>
                             </div>
-                        </div>
-                        <div class="contentBox">
-                            <div class="box">
-                                <div class="title">노는 같은 방향으로 저어야 덜 힘들어요</div>
-                                <div class="content">달성해야 하는 역할과 목표를 전사적 관점에서 고민하여 업무에 반영합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#공동의 목표의식</div></li>
-                                </ul>
-                            </div>
-                            <div class="bar"></div>
-                            <div class="box">
-                                <div class="title">되면 되고 있다고, 늦으면 늦는다고</div>
-                                <div class="content">업무의 현황과 흐름에 대해 협업하는 동료와 자주, 빠르게, 투명하게 공유합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#투명한 정보공유</div></li>
-                                </ul>
-                            </div>
+                            <div class="count"><span class="number" data-count="100">0</span>%</div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="contentSection moAni">
-                <div class="inner">
-                    <div class="halfBox">
-                        <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
-                            <div class="bgCover"></div>
-                            <div class="textBox">
-                                <div class="t1">02</div>
-                                <div class="t2">Emvrace Ideas, Commit with Passion !</div>
-                                <div class="t3">우리는 명확하게 소통하고 치열하게 토론하며, 결정된 것은 전념하여 실행합니다.</div>
+                </section>
+                <section class="pointSec moAni">
+                    <div class="inner">
+                        <div class="t1">핵심가치</div>
+                        <div class="t2">레드브릭스는 어떻게 일할까요 ? </div>
+                    </div>
+                </section>
+                <section class="contentSection moAni">
+                    <div class="inner">
+                        <div class="halfBox">
+                            <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
+                                <div class="bgCover"></div>
+                                <div class="textBox">
+                                    <div class="t1">01</div>
+                                    <div class="t2">One Brocks, One Goal!</div>
+                                    <div class="t3">우리는 공동의 미션과 비전을 향해 자발적이고 주도적으로 협업합니다.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contentBox">
-                            <div class="box">
-                                <div class="title">태도가 프로를 만들어요</div>
-                                <div class="content">프로로서 상대방을 존중하며, 명확한 근거를 기반으로 의견을 제시하고 소통합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#상호존중</div></li>
-                                    <li><div class="tag">#데이터 기반 의사결정</div></li>
-                                </ul>
-                            </div>
-                            <div class="bar"></div>
-                            <div class="box">
-                                <div class="title">일단 해보고 말해도 늦지 않아요</div>
-                                <div class="content">논의를 거쳐 결정된 사항은 자신의 의견과 다르더라도 따르며, 최선을 다해 협력합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#치열한 토론과 헌신</div></li>
-                                </ul>
+                            <div class="contentBox">
+                                <div class="box">
+                                    <div class="title">노는 같은 방향으로 저어야 덜 힘들어요</div>
+                                    <div class="content">달성해야 하는 역할과 목표를 전사적 관점에서 고민하여 업무에 반영합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#공동의 목표의식</div></li>
+                                    </ul>
+                                </div>
+                                <div class="bar"></div>
+                                <div class="box">
+                                    <div class="title">되면 되고 있다고, 늦으면 늦는다고</div>
+                                    <div class="content">업무의 현황과 흐름에 대해 협업하는 동료와 자주, 빠르게, 투명하게 공유합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#투명한 정보공유</div></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="contentSection moAni">
-                <div class="inner">
-                    <div class="halfBox">
-                        <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
-                            <div class="bgCover"></div>
-                            <div class="textBox">
-                                <div class="t1">03</div>
-                                <div class="t2">Raise the Bar, Aim Higher</div>
-                                <div class="t3">우리는 익숙함에 머무리지 않고 더 높은 목표와 도전 속에서 책임을 완수합니다.</div>
+                </section>
+                <section class="contentSection moAni">
+                    <div class="inner">
+                        <div class="halfBox">
+                            <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
+                                <div class="bgCover"></div>
+                                <div class="textBox">
+                                    <div class="t1">02</div>
+                                    <div class="t2">Emvrace Ideas, Commit with Passion !</div>
+                                    <div class="t3">우리는 명확하게 소통하고 치열하게 토론하며, 결정된 것은 전념하여 실행합니다.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contentBox">
-                            <div class="box">
-                                <div class="title">뭐 하나를 해도 제대로</div>
-                                <div class="content">시작한 일은 달성을 위해 집요하게 노력합니다. ‘그럴 수 도 있지’라고 변명하지 않습니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#도전과 새로운 시도</div></li>
-                                </ul>
-                            </div>
-                            <div class="bar"></div>
-                            <div class="box">
-                                <div class="title">배워서 프로, 나눠서 히어로</div>
-                                <div class="content">높은 전문성을 갖추기 위해 지속적이고 주도적으로 학습하며 동료와 함께 나눕니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#학습과 성장</div></li>
-                                    <li><div class="tag">#탁월성</div></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="contentSection moAni">
-                <div class="inner">
-                    <div class="halfBox">
-                        <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
-                            <div class="bgCover"></div>
-                            <div class="textBox">
-                                <div class="t1">04</div>
-                                <div class="t2">Think Further, Go Farther !</div>
-                                <div class="t3">우리는 우리의 긍정적인 영향력으로 산업과 사회에 기여할 수 있도록 노력합니다.</div>
-                            </div>
-                        </div>
-                        <div class="contentBox">
-                            <div class="box">
-                                <div class="title">우리가 사는 세상, 앞으로도 살아갈 세상</div>
-                                <div class="content">의사 결정에 앞서 산업과 사회, 환경에 미칠 영향을 고려합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#지속가능성</div></li>
-                                </ul>
-                            </div>
-                            <div class="bar"></div>
-                            <div class="box">
-                                <div class="title">바르게 실행하고 함께 성장해요</div>
-                                <div class="content">다양한 비즈니스 파트너와 협력하여 동반 성장을 추구합니다.</div>
-                                <ul class="tagList">
-                                    <li><div class="tag">#상생추구</div></li>
-                                    <li><div class="tag">#윤리경영</div></li>
-                                </ul>
+                            <div class="contentBox">
+                                <div class="box">
+                                    <div class="title">태도가 프로를 만들어요</div>
+                                    <div class="content">프로로서 상대방을 존중하며, 명확한 근거를 기반으로 의견을 제시하고 소통합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#상호존중</div></li>
+                                        <li><div class="tag">#데이터 기반 의사결정</div></li>
+                                    </ul>
+                                </div>
+                                <div class="bar"></div>
+                                <div class="box">
+                                    <div class="title">일단 해보고 말해도 늦지 않아요</div>
+                                    <div class="content">논의를 거쳐 결정된 사항은 자신의 의견과 다르더라도 따르며, 최선을 다해 협력합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#치열한 토론과 헌신</div></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <section class="contentSection moAni">
+                    <div class="inner">
+                        <div class="halfBox">
+                            <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
+                                <div class="bgCover"></div>
+                                <div class="textBox">
+                                    <div class="t1">03</div>
+                                    <div class="t2">Raise the Bar, Aim Higher</div>
+                                    <div class="t3">우리는 익숙함에 머무리지 않고 더 높은 목표와 도전 속에서 책임을 완수합니다.</div>
+                                </div>
+                            </div>
+                            <div class="contentBox">
+                                <div class="box">
+                                    <div class="title">뭐 하나를 해도 제대로</div>
+                                    <div class="content">시작한 일은 달성을 위해 집요하게 노력합니다. ‘그럴 수 도 있지’라고 변명하지 않습니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#도전과 새로운 시도</div></li>
+                                    </ul>
+                                </div>
+                                <div class="bar"></div>
+                                <div class="box">
+                                    <div class="title">배워서 프로, 나눠서 히어로</div>
+                                    <div class="content">높은 전문성을 갖추기 위해 지속적이고 주도적으로 학습하며 동료와 함께 나눕니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#학습과 성장</div></li>
+                                        <li><div class="tag">#탁월성</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="contentSection moAni">
+                    <div class="inner">
+                        <div class="halfBox">
+                            <div class="imgBox" style="background-image: url('./img/main/quadrangleSection/img.jpg');">
+                                <div class="bgCover"></div>
+                                <div class="textBox">
+                                    <div class="t1">04</div>
+                                    <div class="t2">Think Further, Go Farther !</div>
+                                    <div class="t3">우리는 우리의 긍정적인 영향력으로 산업과 사회에 기여할 수 있도록 노력합니다.</div>
+                                </div>
+                            </div>
+                            <div class="contentBox">
+                                <div class="box">
+                                    <div class="title">우리가 사는 세상, 앞으로도 살아갈 세상</div>
+                                    <div class="content">의사 결정에 앞서 산업과 사회, 환경에 미칠 영향을 고려합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#지속가능성</div></li>
+                                    </ul>
+                                </div>
+                                <div class="bar"></div>
+                                <div class="box">
+                                    <div class="title">바르게 실행하고 함께 성장해요</div>
+                                    <div class="content">다양한 비즈니스 파트너와 협력하여 동반 성장을 추구합니다.</div>
+                                    <ul class="tagList">
+                                        <li><div class="tag">#상생추구</div></li>
+                                        <li><div class="tag">#윤리경영</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
        </main>
 
 

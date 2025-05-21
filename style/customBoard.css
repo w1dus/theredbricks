@@ -1,5 +1,5 @@
 :root {
-    --board-active-color: #365A91;
+    --board-active-color: #CD354E;
 }   
 
 /* 관리자 메뉴 */
@@ -57,7 +57,7 @@
 .basicBoardArti .basicList > li .item .center{ text-align: center; }
 .basicBoardArti .basicList > li .item .chk{ flex-shrink: 0; width: 22px; }
 .basicBoardArti .basicList > li .item .number{ flex-shrink: 0; width: 50px; overflow: hidden; }
-.basicBoardArti .basicList > li .item .number.on{ color: #365A91; }
+.basicBoardArti .basicList > li .item .number.on{ color: #CD354E}
 .basicBoardArti .basicList > li .item .title{ justify-content: center; flex-grow: 1; overflow: hidden; gap: 2px; display: flex; gap: 2px;  }
 .basicBoardArti .basicList > li .item .title .iconWrap{ display: flex; align-items: center; gap: 2px; align-items: center; }
 .basicBoardArti .basicList > li .item .title a{ width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -1,1 +1,24 @@
 @charset "utf-8";
+/* animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; */
+
+.main .aboutSec .circle_list > li{ opacity: 0; }
+.main .aboutSec.on .circle_list > li:nth-child(1){  animation: fadeInDown 0.5s ease-in-out 0s 1 forwards running; }
+.main .aboutSec.on .circle_list > li:nth-child(2){  animation: fadeInDown 0.5s ease-in-out 0.1s 1 forwards running; }
+.main .aboutSec.on .circle_list > li:nth-child(3){  animation: fadeInDown 0.5s ease-in-out 0.2s 1 forwards running; }
+
+@keyframes fadeIn {
+    0% {transform: translate3d(0px, 30px, 0px); }
+    100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes fadeInDown {
+    0% {transform: translate3d(0px, -30px, 0px); }
+    100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translate3d(30px, 0, 0px); }
+    100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
+    100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}

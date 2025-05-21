@@ -203,6 +203,7 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .main .aboutSec .bottomBox{ margin-top: 72px; width: 100%; padding-left: calc((100% - 1200px) / 2); }
 .main .aboutSec .bottomBox .grayBg{ padding: 80px 140px; display: flex; gap: 65px; position: relative; background-color: #F5F5F5; border-radius: 1000px 0 0 1000px; }
 .main .aboutSec .bottomBox .grayBg::before{ content:'Red Bricks'; color:#F5F5F5; position: absolute; right: 28px; bottom: calc(100% - 30px); font-size: 191px; font-weight: 700;  }
+.main .aboutSec .bottomBox .grayBg .box{ min-width: 200px; }
 .main .aboutSec .bottomBox .info{ margin-top: 15px; }
 
 
@@ -224,6 +225,7 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 
     .main .aboutSec .bottomBox .grayBg{ padding: 40px 80px; }
     .main .aboutSec .bottomBox .grayBg::before{ font-size: 120px; bottom: 100%;  }
+    .main .aboutSec .bottomBox .grayBg .box{ min-width: 150px; }
 }
 @media screen and (max-width: 950px) {
     .main .aboutSec { min-height:100vh; height: auto; padding-bottom: 0; }
@@ -239,6 +241,7 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
     .main .aboutSec .circle_list .circle .title .white_circle{ display: none; }
     .main .aboutSec .bottomBox .grayBg{ gap: 40px; padding: 20px 40px; border-radius: 0; margin-top: 12vw; }
     .main .aboutSec .bottomBox .grayBg::before{ right: 0; font-size: 19vw; }
+    .main .aboutSec .bottomBox .grayBg .box{ min-width: unset; }
 }
 @media screen and (max-width: 650px) {
     .main .aboutSec .circle_list .circle .title{ font-size: 4.5vw; }
@@ -444,11 +447,12 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 @media screen and (max-width: 650px) { 
     .main .positiveSection .titleWrap{ font-size: 10vw; width: 78vw; }
     .main .positiveSection .titleWrap span.front{ padding-left: 10vw; }
+    .main .positiveSection .titleWrap span.front_m{ padding-left: 5vw; }
 
     .main .positiveSection .titleWrap .mint{ right: 48%; }
     .main .positiveSection .titleWrap .red{ right: 35%; }
 
-    .main .positiveSection.on .titleWrap .red.red1{ right: 39%; }
+    .main .positiveSection.on .titleWrap .red.red1{ right: 45%; }
     .main .positiveSection.on .titleWrap .red.red2{ right: 57%; } 
     .main .positiveSection.on .titleWrap .mint.mint1{ right: 88%; } 
     .main .positiveSection.on .titleWrap .mint.mint2{ right: 88%; }

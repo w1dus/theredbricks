@@ -5,10 +5,67 @@ document.addEventListener("DOMContentLoaded", function(e){
     animationOnHandler();
     headerScrollHandler();
     yearAni();
+    countingNumberHandler();
 })
 document.addEventListener("scroll", function(){
     animationOnHandler();
 })
+
+
+const countingNumberHandler = () => {
+    const countList = document.querySelector('.main .aboutSec');
+    const numbers = document.querySelectorAll('.main .aboutSec .main_title2 .count');
+    const duration = 1; // Duration in seconds
+    if(countList){
+        // Function to reset numbers to 0
+        function resetNumbers() {
+            numbers.forEach(number => {
+                number.textContent = '0';
+            });
+        }
+    
+        // Function to format numbers with commas
+        function formatNumber(num) {
+            return num.toLocaleString();
+        }
+    
+        // Function to animate counting
+        function animateCount() {
+            numbers.forEach(number => {
+                const target = +number.getAttribute('data-count');
+                const increment = target / (duration * 60); // 60 frames per second
+                let current = 0;
+    
+                function updateCount() {
+                    current += increment;
+                    if (current < target) {
+                        number.textContent = formatNumber(Math.ceil(current));
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        number.textContent = formatNumber(target);
+                    }
+                }
+                updateCount();
+            });
+        }
+    
+        // Intersection Observer to detect visibility
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    countList.classList.add('on');
+                    animateCount();
+                } else {
+                    countList.classList.remove('on');
+                    resetNumbers();
+                }
+            });
+        }, {
+            threshold: 0.1 // Adjust threshold as needed
+        });
+        observer.observe(countList);
+    }
+}
 
 const yearAni = () => {
     const countList = document.querySelectorAll('.year_ani');
@@ -73,11 +130,11 @@ const animationOnHandler = () => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('on');
                 } else {
-                    entry.target.classList.remove('on');
+                    // entry.target.classList.remove('on');
                 }
             });
         }, {
-            threshold: 0.5 // Adjust threshold as needed
+            threshold: 0.1 // Adjust threshold as needed
         });
         
         // Observe each .ani element

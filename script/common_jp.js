@@ -6,11 +6,15 @@ document.addEventListener("DOMContentLoaded", function(e){
     headerScrollHandler();
     yearAni();
     countingNumberHandler();
+    mainHeader();
 })
 document.addEventListener("scroll", function(){
     animationOnHandler();
 })
 
+const mainHeader = () => {
+    $('header.main').addClass('show')
+}
 
 const countingNumberHandler = () => {
     const countList = document.querySelector('.main .aboutSec');

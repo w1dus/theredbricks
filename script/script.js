@@ -227,7 +227,7 @@ const subCircleBoxHalfImgBox = () => {
           $images.eq(current).addClass('on');
           // 다음 이미지로 인덱스 이동
           current = (current + 1) % $images.length;
-        }, 2000); // 2초 간격
+        }, 1000); // 1초 간격
       });
 }
 

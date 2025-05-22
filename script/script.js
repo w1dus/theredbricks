@@ -48,7 +48,7 @@ const sub04_1_scroll = () => {
               scrollTrigger: {
                 trigger: ".sub04_1 .pointSec",
                 start: "top 0%",
-                end: "+=100%",
+                end: "bottom 20%",
                 pin: true,
                 anticipatePin: 1,
                 markers: false,
@@ -81,7 +81,7 @@ const sub04_1_scroll = () => {
                   scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: "bottom 50%",
+                    end: "bottom 0%",
                     scrub: true,
                   }
                 }
@@ -99,7 +99,7 @@ const sub04_1_scroll = () => {
                   scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: "bottom top",
+                    end: "bottom top", 
                     scrub: true,
                   }
                 }
@@ -113,14 +113,16 @@ const sub04_1_scroll = () => {
                 scrollTrigger: {
                   trigger: section,
                   start: "top top",
-                  toggleActions: "play reverse play reverse",
+                  end : "bottom top",
+                  toggleActions: "play none none none",
                 }
+                
               });
         
               ScrollTrigger.create({
                 trigger: section,
                 start: "top top",
-                end: "+=100%",
+                end: "bottom 0%",
                 pin: true,
                 anticipatePin: 1,
                 snap: {
@@ -128,7 +130,7 @@ const sub04_1_scroll = () => {
                   duration: 0.5,
                   ease: "power1.inOut"
                 },
-                markers: false,
+                // markers: true,
               });
             });
         
@@ -258,35 +260,7 @@ const sub01_1_circleSec = () => {
 };
 
   
-// const sub01_1_circleSec = () => {
-//     gsap.to(".sub01_1 .circleSec", {
-//         scrollTrigger: {
-//           trigger: ".sub01_1 .circleSec", // trigger
-//           start: "top ", // 첫 번째 start
-//           end: "bottom top", // 첫 번째 end
-//           pin: true, // 해당 섹션 고정 (한 번만 적용)
-//           markers: true, // 디버그용 마커 표시
-//           onUpdate: (self) => {
-//             console.log("현재 스크롤 위치:", self.scroll()); // 실제 스크롤 위치를 출력
-//             // 원하는 조건을 설정하여 효과를 줄 수 있습니다.
-//             if (self.progress > 0.66) {
-//                 console.log("1")
-//               $('.sub01_1 .circleSec .halfBox:nth-child(3)').addClass('on')
-//             }else if (self.progress > 0.33) {
-//               // 예시: 스크롤이 50% 이상 진행되었을 때 특정 효과 추가
-//               console.log("2")
-//               $('.sub01_1 .circleSec .halfBox:nth-child(2)').addClass('on')
 
-//             }
-//           }
-//         }
-//     });
-    
-    
-      
-// };
-  
-  
 const sub01_1_scrollText= () =>{
         // 01. 세로로 무한으로 흐르는 슬라이드 
     // GSAP 애니메이션

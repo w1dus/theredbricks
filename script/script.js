@@ -152,7 +152,8 @@ const sub04_1_scroll = () => {
                 ScrollTrigger.create({
                   trigger: elem,
                   start: "top 80%", 
-                  end: "bottom 20%", 
+                  end: "bottom 0%", 
+                  once: true,
                   toggleClass: { targets: elem, className: "on" },
                   once: false, //
                 });

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     yearAni();
     countingNumberHandler();
     mainHeader();
-    bodyScroll();
+    // bodyScroll();
     
 })
 document.addEventListener("scroll", function(){

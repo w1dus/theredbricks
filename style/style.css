@@ -1162,3 +1162,44 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
     /* 50% { opacity: .6; } */
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
+
+
+/* ======= 8/6 portfolioSec 추가 ======= */
+section.portfolioSec { padding: 100px 0; background-color: #F8F3EC; }
+section.portfolioSec .pf_title_text { position: relative; font-size: 32px; font-weight: 700; color: #222; }
+section.portfolioSec .pf_title_text::after { content: ''; display: block; width: 80px; height: 4px; background-color: #CF3140; position: absolute; top: -10px; }
+
+/* portfolioSec works background */
+section.portfolioSec .imgBox { background: url('../img/main/portfolioSec/pf_img_1.jpg') no-repeat center / cover; }
+
+section.portfolioSec .pf_div { margin-top: 25px; }
+section.portfolioSec .pf_div .pf_ul { width: calc(100% + 10px); margin-left: -5px; display: flex; flex-wrap: wrap; }
+section.portfolioSec .pf_div .pf_ul > li { width: calc(100%/4); padding: 5px; }
+section.portfolioSec .pf_div .pf_ul > li.marginTop { margin-top: 30px; }
+section.portfolioSec .pf_div .pf_ul > li .imgBox { width: ; aspect-ratio: 1; background-color: #D9D9D9; border-radius: 8px; margin-bottom: 15px; }
+section.portfolioSec .pf_div .pf_ul > li .pf_text { font-size: 18px; font-weight: 500; word-break: keep-all; }
+
+section.portfolioSec .pf_div .pfBtn { width: 324px; display: block; padding: 15px 0; border-radius: 5px; font-size: 18px; color: #fff; background-color: #CF2E41; border: none; margin: 40px auto 0; }
+
+@media screen and (max-width: 1250px) {
+    section.portfolioSec .pf_div .pf_ul > li { width: calc(100%/3); }
+    section.portfolioSec .pf_div .pf_ul > li.marginTop_1250 { margin-top: 30px; }
+} 
+@media screen and (max-width: 720px) {
+    section.portfolioSec { padding: 13vw 0; }
+    section.portfolioSec .pf_title_text { font-size: 28px; }
+    section.portfolioSec .pf_title_text::after { width: 60px; height: 3px; }
+    section.portfolioSec .pf_div .pf_ul > li { width: calc(100%/2); }
+    section.portfolioSec .pf_div .pf_ul > li.marginTop_1250 { margin-top: 20px; }
+    section.portfolioSec .pf_div .pf_ul > li.marginTop_720 { margin-top: 20px; }
+    section.portfolioSec .pf_div .pf_ul > li .pf_text { font-size: 14px; }
+
+    section.portfolioSec .pf_div .pfBtn { width: 280px; font-size: 16px; }
+} 
+@media screen and (max-width: 480px) {
+    section.portfolioSec .pf_title_text { font-size: 20px; }
+    section.portfolioSec .pf_title_text::after { width: 42px; height: 2px; top: -7px; }
+    section.portfolioSec .pf_div { margin-top: 15px; }
+    section.portfolioSec .pf_div .pf_ul > li .pf_text { font-size: 12px; }
+    section.portfolioSec .pf_div .pfBtn { width: 100%; padding: 12px 0; }
+}

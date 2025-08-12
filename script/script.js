@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function(e){
     Sub04_1_progressSec();
     sub04_1_scroll();
     QnaToggle();
-    
+    sub02_2_count();
+
+    qnaHandle2();
 })
 
 const QnaToggle = () => {
@@ -489,3 +491,61 @@ const pcMenuSlide = () => {
     });
 }
 
+// 8/11 sub02_2 카운트
+const sub02_2_count = () => {
+  $('.counting').each(function() {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+    
+    $({ countNum: $this.text()}).animate({
+      countNum: countTo
+    },
+  
+    {
+  
+      duration: 800,
+      easing:'linear',
+      step: function() {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $this.text(this.countNum);
+        //alert('finished');
+      }
+  
+    });  
+    
+  
+  });
+}
+// sub02_3 qna
+
+// const qnaHandle2 = () => {
+//     $('.answer_box').hide();
+
+//     $('.plus_btn').click(function(){
+//       $(this).closest('.question_box').next('.answer_box').slideToggle();
+//     })
+    
+//     $('.minus_btn').click(function(){
+//       $(this).parent('.answer_box').slideUp();
+//     })
+// }
+
+const qnaHandle2 = () => {
+  $('.answer_box').hide(); // 처음엔 전부 닫기
+
+  $('.plus_btn').click(function(){
+    const targetAnswer = $(this).closest('.question_box').next('.answer_box');
+
+    // 현재 클릭한 answer_box를 제외하고 모두 닫기
+    $('.answer_box').not(targetAnswer).slideUp();
+
+    // 현재 클릭한 answer_box 토글
+    targetAnswer.slideToggle();
+  });
+
+  $('.minus_btn').click(function(){
+    $(this).closest('.answer_box').slideUp();
+  });
+}

@@ -1053,7 +1053,7 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 
 
 /* .sub04_2 .contentSection */
-.sub04_2 .contentSection{ position: relative; overflow: hidden; padding: 100px 0; }
+.sub04_2 .contentSection{ position: relative; overflow: hidden; padding: 60px 0; }
 .sub04_2 .contentSection .halfBox{ display: flex; }
 .sub04_2 .contentSection .halfBox + .halfBox{ padding-top: 100px; }
 .sub04_2 .contentSection .halfBox .titleDiv{ width: 360px; flex-shrink: 0; }
@@ -1430,7 +1430,7 @@ section.portfolioSec .pf_div .pfBtn { width: 324px; display: block; padding: 15p
 /* programSec */
 .sub02_2 section.programSec { position: relative; padding: 110px 0; background: linear-gradient(273deg, rgba(158, 36, 56, 0.00) 0%, #9E2438 100%), #C8344C; text-align: center; color: #fff; }
 .sub02_2 section.programSec .program_bg { width: 1150px; position: absolute; bottom: 20px; left: 30px; }
-.sub02_2 section.programSec .pg_title { font-size: 32px; font-weight: 700; }
+.sub02_2 section.programSec .pg_title { font-size: 32px; font-weight: 700; margin-bottom: 2vw; line-height: 1.5; }
 .sub02_2 section.programSec .pg_text { font-size: 18px; font-weight: 700; margin: 25px 0 20px; }
 .sub02_2 section.programSec .pro_btn { width: 300px; padding: 10px 0; font-size: 20px; font-weight: 700; color: #CF2E41; background: #fff; border-radius: 4px; border: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
 .sub02_2 br.br_950 { display: none; }
@@ -1568,6 +1568,8 @@ section.visionSec .br_500 { display: none; }
 }
 
 /* ======= 8/13 sub03_1 수정======= */
+/* .sub03_1 .portfolio_div */
+
 .sub03_1 .portfolio_div {  }
 .sub03_1 .portfolio_div .portfolio_ul  { margin: 30px 0 0; display: flex; align-items: flex-end; justify-content: space-between; }
 .sub03_1 .portfolio_div .portfolio_ul > li  {  }
@@ -1598,4 +1600,26 @@ section.visionSec .br_500 { display: none; }
     .sub03_1 .portfolio_div .portfolio_ul > li .text_1 { font-size: 20px; }
     .sub03_1 .portfolio_div .portfolio_ul > li .text_2 { font-size: 16px; text-align: center; }
     .sub03_1 .portfolio_div .portfolio_ul > li .text_2 br { display: block; }
+}
+
+/* ======= 8/14 sub01_2 수정======= */
+/* applySec */
+
+.applySec .apply_text_div { padding-top: 70px; }
+.applySec .apply_text_div .apply_text  { font-size: 24px; font-weight: 500; line-height: 1.5; text-align: center; }
+.applySec .apply_text_div .apply_text b  { font-size: 28px; font-weight: 700; }
+
+@media screen and (max-width: 1250px) {
+    .applySec .apply_text_div { padding-top: 50px; }
+    .applySec .apply_text_div .apply_text  { font-size: 20px; line-height: 1.7; }
+    .applySec .apply_text_div .apply_text b  { font-size: 24px; font-weight: 700; }
+}
+@media screen and (max-width: 650px) {
+    .applySec .apply_text_div .apply_text  {  }
+    .applySec .apply_text_div .apply_text b  {  font-weight: 700; }
+}
+@media screen and (max-width: 500px) {
+    .applySec .apply_text_div { padding-top: 30px; }
+    .applySec .apply_text_div .apply_text  { font-size: 18px; }
+    .applySec .apply_text_div .apply_text b  { font-size: 20px; font-weight: 700; }
 }

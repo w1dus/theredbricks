@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     qnaHandle2();
 })
-
 const QnaToggle = () => {
     $('.sub04_2 .contentSection .qnaList .qBox').click(function(){
         $('.sub04_2 .contentSection .qnaList .qBox').not(this).closest('li').removeClass('active');
@@ -244,16 +243,21 @@ const sub01_1_circleSec = () => {
         markers: false, // 디버그용 마커 표시
         onUpdate: (self) => {
             if (self.direction === 1) { // 스크롤 내릴 때
-              if (self.progress > 0.66) {
+              if (self.progress > 0.75) {
+                $('.sub01_1 .circleSec .halfBox:nth-child(4)').addClass('on');
+              } else if (self.progress > 0.5) {
                 $('.sub01_1 .circleSec .halfBox:nth-child(3)').addClass('on');
-              } else if (self.progress > 0.33) {
+              }else if(self.progress > 0.25){
                 $('.sub01_1 .circleSec .halfBox:nth-child(2)').addClass('on');
               }
             } else if (self.direction === -1) { // 스크롤 올릴 때
-              if (self.progress < 0.66) {
+              if (self.progress < 0.75) {
+                $('.sub01_1 .circleSec .halfBox:nth-child(4)').removeClass('on');
+              }
+              if (self.progress < 0.5) {
                 $('.sub01_1 .circleSec .halfBox:nth-child(3)').removeClass('on');
               }
-              if (self.progress < 0.33) {
+              if (self.progress < 0.25) {
                 $('.sub01_1 .circleSec .halfBox:nth-child(2)').removeClass('on');
               }
             }
@@ -297,31 +301,49 @@ const positiveSection = () => {
         }
     });
 }
+// const logoSlide = () => {
+//     gsap.to(".logoSlideSec .logoWrap .logoList:nth-child(2n-1) > li", {
+//         yPercent: -1000,
+//         ease: "none",
+//         duration: 30,
+//         repeat: -1,
+//         modifiers: {
+//           yPercent: gsap.utils.wrap(-100, 0)
+//         }
+//     });
+    
+
+//     gsap.to(".logoSlideSec .logoWrap .logoList:nth-child(2n) > li", {
+//         yPercent: 1000,
+//         ease: "none",
+//         duration: 30,
+//         repeat: -1,
+//         modifiers: {
+//           yPercent: gsap.utils.wrap(-100, 0)
+//         }
+//     });
+// }
+
 const logoSlide = () => {
+  document.querySelectorAll(".logoSlideSec .logoWrap .logoList").forEach((list, i) => {
+    // 이미 복제한 적 없으면 복제
+    if (!list.dataset.cloned) {
+      list.innerHTML += list.innerHTML;
+      list.dataset.cloned = "true";
+    }
 
-    // 01. 세로로 무한으로 흐르는 슬라이드 
-    // GSAP 애니메이션
-    gsap.to(".logoSlideSec .logoWrap .logoList:nth-child(2n-1) > li", {
-        yPercent: -1000,
-        ease: "none",
-        duration: 30,
-        repeat: -1,
-        modifiers: {
-          yPercent: gsap.utils.wrap(-100, 0)
-        }
+    // 홀수/짝수 라인 방향 다르게
+    const direction = (i % 2 === 0) ? "-50%" : "50%";
+
+    gsap.to(list, {
+      y: direction,
+      duration: 30,
+      ease: "none",
+      repeat: -1
     });
+  });
+};
 
-
-    gsap.to(".logoSlideSec .logoWrap .logoList:nth-child(2n) > li", {
-        yPercent: 1000,
-        ease: "none",
-        duration: 30,
-        repeat: -1,
-        modifiers: {
-          yPercent: gsap.utils.wrap(-100, 0)
-        }
-    });
-}
 const howRedBricks = () => {
     const section = document.querySelector('.howRedBricksSection')
 

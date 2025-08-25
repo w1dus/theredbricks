@@ -32,3 +32,34 @@ header.main.show{ top:0; }
     0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
+
+section.valueSec ul > li:nth-child(1) { opacity: 0; }
+section.valueSec ul > li:nth-child(1).on {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;   }
+section.valueSec ul > li:nth-child(2) { opacity: 0; }
+section.valueSec ul > li:nth-child(2).on {  animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.2s; }
+section.valueSec ul > li:nth-child(3) { opacity: 0; }
+section.valueSec ul > li:nth-child(3).on {  animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.2s; }
+section.valueSec ul > li:nth-child(4) { opacity: 0; }
+section.valueSec ul > li:nth-child(4).on {  animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.2s; }
+
+.sub04_1 .sub2_sec1 .text_div .text_1 { opacity: 0; }
+.sub04_1 .sub2_sec1 .text_div.on .text_1 {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.1s; }
+.sub04_1 .sub2_sec1 .text_div .text_2 { opacity: 0; }
+.sub04_1 .sub2_sec1 .text_div.on .text_2 {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.3s; }
+.sub04_1 .sub2_sec1 .text_div .text_3 { opacity: 0; }
+.sub04_1 .sub2_sec1 .text_div.on .text_3 {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.5s; }
+
+.sub04_1 .sub2_sec1 ul { opacity: 0; }
+.sub04_1 .sub2_sec1 ul.on {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.1s; }
+
+.sub04_1 .sub2_sec2 .text_1 { opacity: 0; }
+.sub04_1 .sub2_sec2 .text_1.on {   animation: fadeIn 0.5s ease-in-out 0s 1 forwards running;  animation-delay: 0.1s; }
+
+.sub04_1 .sub2_sec2 ul li:nth-child(1) { opacity: 0; }
+.sub04_1 .sub2_sec2 ul li:nth-child(1).on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }
+.sub04_1 .sub2_sec2 ul li:nth-child(3) { opacity: 0; }
+.sub04_1 .sub2_sec2 ul li:nth-child(3).on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }
+.sub04_1 .sub2_sec2 ul li:nth-child(5) { opacity: 0; }
+.sub04_1 .sub2_sec2 ul li:nth-child(5).on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }
+.sub04_1 .sub2_sec2 ul li:nth-child(7) { opacity: 0; }
+.sub04_1 .sub2_sec2 ul li:nth-child(7).on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }

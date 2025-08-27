@@ -201,18 +201,21 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .main .aboutSec .circle_list .circle .title .white_circle{ display: flex; align-items: center; justify-content: center; position: absolute; left: 0; width: 19px; height: 19px; background-color: #fff; border-radius: 50%; }
 .main .aboutSec .circle_list .circle .title .white_circle .barWrap{ position: relative; display: flex; align-items: flex-end; justify-content: center; }
 .main .aboutSec .circle_list .circle .title .white_circle .barWrap .bar{ position: absolute; width: 2px; height:193px; background-color: #fff; bottom: 0; }
-.main .aboutSec .content{ position: relative; z-index: 2; font-size: 24px; margin-top: 14px; font-weight: 500; }
-
-.main .aboutSec .bottomBox{ margin-top: 72px; width: 100%; padding-left: calc((100% - 1200px) / 2); }
+.main .aboutSec .content{ position: relative; z-index: 2; font-size: 24px; margin-top: 20px; font-weight: 500; line-height: 1.5;  font-size: 34px;}
+.main .aboutSec .content b { font-weight: 700; }
+.main .aboutSec .content span { font-size: 0.8em; }
+.main .aboutSec .bottomBox{ margin-top: 72px; width: 100%; padding-left: calc((100% - 1200px) / 3); }
 .main .aboutSec .bottomBox .grayBg{ padding: 80px 140px; display: flex; gap: 65px; position: relative; background-color: #F5F5F5; border-radius: 1000px 0 0 1000px; }
 .main .aboutSec .bottomBox .grayBg::before{ content:'Red Bricks'; color:#F5F5F5; position: absolute; right: 28px; bottom: calc(100% - 30px); font-size: 191px; font-weight: 700;  }
-.main .aboutSec .bottomBox .grayBg .box{ min-width: 200px; }
+.main .aboutSec .bottomBox .grayBg .box{ min-width:150px; }
 .main .aboutSec .bottomBox .info{ margin-top: 15px; }
 
 
-.main_title1{ position: relative; z-index: 2; color: #CF3140; font-size: 18px; }
-.main_title2{ position: relative; z-index: 2; margin-top: 15px; font-size: 52px; font-weight: 700; }
-
+.main_circle { background: #CF3140; width: 12px; height: 12px; border-radius: 100px; display: none; margin: 0 auto; }
+.main_title1{ position: relative; z-index: 2; color: #fff; font-size: 18px; background-color: #CF3140; width: fit-content; padding: 10px 15px; border-radius: 100px; }
+.main_title2{ position: relative; z-index: 2; font-size: 52px; font-weight: 700; }
+.main_title2::before { position: absolute; top: -9px; left: -3px;  content: ''; display: block; width: 12px; height: 12px; background-color: #CF3140; border-radius: 100px; }
+.main_title2 b { font-size: 0.45em; }
 
 @media screen and (max-width: 1250px) {
     .main .aboutSec{ min-height: 917px; }
@@ -229,7 +232,12 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
     .main .aboutSec .bottomBox .grayBg{ padding: 40px 80px; }
     .main .aboutSec .bottomBox .grayBg::before{ font-size: 120px; bottom: 100%;  }
     .main .aboutSec .bottomBox .grayBg .box{ min-width: 150px; }
-}
+
+    .main_circle { width: 8px; height: 8px; }
+    .main .aboutSec .bottomBox .grayBg { gap: 40px; }
+
+    .main_title2::before { width: 10px; height: 10px; }
+}   
 @media screen and (max-width: 950px) {
     .main .aboutSec { min-height:100vh; height: auto; padding-bottom: 0; }
     .main .aboutSec .inner{ margin-top: 0; }
@@ -249,6 +257,8 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 @media screen and (max-width: 650px) {
     .main .aboutSec .circle_list .circle .title{ font-size: 4.5vw; }
     .main .aboutSec .bottomBox .grayBg{ padding: 40px; text-align: center; flex-direction: column; }
+    .main_circle { width: 8px; height: 8px; display: block; } 
+    .main_title2::before { display: none; } 
 }
 
 
@@ -1931,5 +1941,25 @@ section.valueSec ul > li .box2 .hash_text { padding: 10px 20px; background-color
     .floating_menu ul li .item .f_icon { width: 32px; }
     .floating_menu ul li.toggleBtn .item2 .close_icon { width: 32px; } 
     .floating_menu ul li .item .f_text { font-size: 12px; }
+}
 
+/* ======= sub01_1 수정 ======= */
+/* about_div */
+.sub01_1 .about_div { padding-top: 100px; text-align: center; }
+.sub01_1 .about_div .a_text_1 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+.sub01_1 .about_div .a_text_2 { font-size: 24px; line-height: 1.5; }
+
+@media screen and (max-width: 1250px) {
+    .sub01_1 .about_div .a_text_1 { font-size: 24px; }
+    .sub01_1 .about_div .a_text_2 { font-size: 20px; }
+}
+@media screen and (max-width: 650px) {
+    .sub01_1 .about_div { padding-top: 13vw; }
+    .sub01_1 .about_div .a_text_1 { font-size: 20px; }
+    .sub01_1 .about_div .a_text_2 { font-size: 18px; }
+}
+@media screen and (max-width: 500px) {
+    .sub01_1 .about_div { padding-top: 13vw; }
+    .sub01_1 .about_div .a_text_1 { font-size: 5vw; }
+    .sub01_1 .about_div .a_text_2 { font-size: 4vw; }
 }

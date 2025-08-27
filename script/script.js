@@ -577,8 +577,6 @@ const floatingMenu = () => {
   $('.floating_menu .toggleBtn').click(function(){
     $('.f_list').toggleClass('on');
     $('.floating_menu ul').toggleClass('on');
-    // $(this).addClass('on');
-    // $(this).find('.open_icon').addClass('on');
     $('.floating_menu ul li.toggleBtn .item2 .close_icon').toggleClass('on');
     $('.floating_menu ul li.toggleBtn .item2 .open_icon').toggleClass('on');
   })

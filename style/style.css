@@ -1903,20 +1903,20 @@ section.valueSec ul > li .box2 .hash_text { padding: 10px 20px; background-color
 
 /* floating_menu */
 .floating_menu { position: fixed; right: 100px; bottom: 70px; z-index: 102; }
-.floating_menu ul { padding: 15px; display: flex; flex-direction: column; gap: 10px;  border-radius: 100px; background-color: transparent; transition: 0.3s; }
-.floating_menu ul.on { background-color: #fff; }
+.floating_menu ul { padding: 15px; display: flex; flex-direction: column; gap: 10px;  border-radius: 100px; background-color: #fff; transition: 0.3s; }
+.floating_menu ul.on { background-color: transparent; }
 .floating_menu ul li {  }
-.floating_menu ul li.f_list { opacity: 0; transition: all 0.3s; }
-.floating_menu ul li.f_list.on { opacity: 1; }
+.floating_menu ul li.f_list { opacity: 1; transition: all 0.3s; }
+.floating_menu ul li.f_list.on { opacity: 0; }
 .floating_menu ul li .item { text-align: center; }
 .floating_menu ul li .item .f_icon { margin-bottom: 5px; }
 .floating_menu ul li .item .f_text { font-size: 16px; font-weight: 500; }
 .floating_menu ul li.toggleBtn {  }
 .floating_menu ul li.toggleBtn .item2 { text-align: center; display: flex; justify-content: center; align-items: center; }
-.floating_menu ul li.toggleBtn .item2 .close_icon {  display:  none;}
-.floating_menu ul li.toggleBtn .item2 .close_icon.on { display: block; }
-.floating_menu ul li.toggleBtn .item2 .open_icon {  display:  none; }
-.floating_menu ul li.toggleBtn .item2 .open_icon.on { display: block; }
+.floating_menu ul li.toggleBtn .item2 .close_icon {  display:  block;}
+.floating_menu ul li.toggleBtn .item2 .close_icon.on { display: none; }
+.floating_menu ul li.toggleBtn .item2 .open_icon {  display:  block; }
+.floating_menu ul li.toggleBtn .item2 .open_icon.on { display: none; }
 
 @media screen and (max-width: 1250px) {
     .floating_menu { right: 50px; bottom: 40px; }
@@ -1931,5 +1931,5 @@ section.valueSec ul > li .box2 .hash_text { padding: 10px 20px; background-color
     .floating_menu ul li .item .f_icon { width: 32px; }
     .floating_menu ul li.toggleBtn .item2 .close_icon { width: 32px; } 
     .floating_menu ul li .item .f_text { font-size: 12px; }
-    
+
 }

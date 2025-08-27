@@ -364,7 +364,7 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .main .quadrangleSection .inner::after{ content:''; display: block; width: 100%; height: 100%; background-color: #F7F7F7; position: absolute; right: calc(-100% - 10px); top: 0; border-radius: 10px; }
 .main .quadrangleSection .halfBox{ display: flex; gap: 10px; }
 .main .quadrangleSection .box{ display: flex; flex-direction: column; }
-.main .quadrangleSection .imgItem{ display: flex; align-items: center; justify-content: center; position: relative; border-radius: 10px; overflow: hidden; width: 580px; height: 500px; }
+.main .quadrangleSection .imgItem{ display: flex; align-items: center; justify-content: center; position: relative; border-radius: 10px; overflow: hidden; width: 580px; height: 500px; pointer-events: none; }
 .main .quadrangleSection .imgItem .background{ margin-left: -20%; width: 120%; transition: transform 1s; }
 .main .quadrangleSection .imgItem:hover .background{ transform: scale(1.1); }
 .main .quadrangleSection .imgItem .contentBox{ 
@@ -427,18 +427,25 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 .main .positiveSection .titleWrap{ transition: letter-spacing 1s; letter-spacing: -.2em;  position: relative; width: 1000px; max-width: 100%; font-size: 80px; font-weight: 800; }
 .main .positiveSection.on .titleWrap{ letter-spacing: -0.04em;  }
 .main .positiveSection .titleWrap span{ transition: right 1s , opacity 2s; opacity: 0; }
-.main .positiveSection .titleWrap span.front{ padding-left: 6%; }
-.main .positiveSection .titleWrap span.front.rfront{ padding-left: 12%; }
+.main .positiveSection .titleWrap span.front{ padding-left: 4%; }
+.main .positiveSection .titleWrap span.red{ position: relative; }
+.main .positiveSection .titleWrap span.red b{ position: absolute; }
+
+.main .positiveSection .titleWrap span.front.front_m{ padding-left: 6%; }
+.main .positiveSection .titleWrap span.front.rfront{ padding-left: 5%; }
 .main .positiveSection.on .titleWrap span{ opacity: 1; }
 .main .positiveSection .titleWrap .mint{ z-index: 1; opacity: 1; color: #5CC2CE; position: absolute; opacity: 1; right: 40px; }
 .main .positiveSection .titleWrap .mint2{ right: 70px; }
 .main .positiveSection .titleWrap .red{ z-index: 1; opacity: 1;  position: absolute; color: #CD354E; opacity: 1; right: 0; }
 
-.main .positiveSection.on .titleWrap .mint.mint1{ right: 94%; }
-.main .positiveSection.on .titleWrap .mint.mint2{ right: 94%; }
+.main .positiveSection.on .titleWrap .mint.mint1{ right: 96%; }
+.main .positiveSection.on .titleWrap .mint.mint2{ right: 96%; }
 
-.main .positiveSection.on .titleWrap .red.red1{ right: 64%; }
-.main .positiveSection.on .titleWrap .red.red2{ right: 61%; }
+.main .positiveSection .titleWrap .red.red1{ right: -64%; }
+.main .positiveSection .titleWrap .red.red2{ right: -68%; }
+
+.main .positiveSection.on .titleWrap .red.red1{ right: 0; }
+.main .positiveSection.on .titleWrap .red.red2{ right: 0; }
 
 .main .positiveSection .content{ opacity: 0; transition: transform .5s, opacity .5s; transition-delay: 1s; transform: translateY(20px); margin-top: 20px; line-height: 2em; margin-bottom: 12px; }
 .main .positiveSection.on .content{ opacity: 1; transform: translateY(0); }
@@ -447,20 +454,30 @@ footer .bottomSec .copy_right{ color: #CCC; font-size: 14px; }
 
 @media screen and (max-width: 1250px) { 
     .main .positiveSection .titleWrap .mint{ right: 25%; }
-    .main .positiveSection .titleWrap .red{ right: 11%; }
+}
+@media screen and (max-width: 1050px) { 
+    .main .positiveSection .titleWrap span.front.front_m{ padding-left: 54px; }
+    .main .positiveSection .titleWrap span.front.rfront{ padding-left: 47px; }
+    /* .main .positiveSection.on .titleWrap .red.red1 { right: unset; } */
+    
+}
+@media screen and (max-width: 750px) { 
+    .main .positiveSection .titleWrap{ font-size: 6vw; }
+    .main .positiveSection .titleWrap span.front.rfront{ padding-left: 3.5vw; }
+    .main .positiveSection .titleWrap span.front.front_m{ padding-left: 4.3vw; }
 }
 @media screen and (max-width: 650px) { 
-    .main .positiveSection .titleWrap{ font-size: 10vw; width: 78vw; }
+    /* .main .positiveSection .titleWrap{ font-size: 10vw; width: 78vw; }
     .main .positiveSection .titleWrap span.front{ padding-left: 10vw; }
     .main .positiveSection .titleWrap span.front_m{ padding-left: 5vw; }
 
     .main .positiveSection .titleWrap .mint{ right: 48%; }
-    .main .positiveSection .titleWrap .red{ right: 35%; }
+    .main .positiveSection .titleWrap .red{ right: 35%; } */
 
-    .main .positiveSection.on .titleWrap .red.red1{ right: 45%; }
-    .main .positiveSection.on .titleWrap .red.red2{ right: 57%; } 
-    .main .positiveSection.on .titleWrap .mint.mint1{ right: 88%; } 
-    .main .positiveSection.on .titleWrap .mint.mint2{ right: 88%; }
+    /* .main .positiveSection.on .titleWrap .red.red1{ right: 45%; } */
+    /* .main .positiveSection.on .titleWrap .red.red2{ right: 57%; }  */
+    /* .main .positiveSection.on .titleWrap .mint.mint1{ right: 88%; } 
+    .main .positiveSection.on .titleWrap .mint.mint2{ right: 88%; } */
 }
 
 
@@ -1444,7 +1461,8 @@ section.portfolioSec .pf_div .pfBtn { width: 324px; display: block; padding: 15p
 .sub02_2 section.programSec .program_bg { width: 1150px; position: absolute; bottom: 20px; left: 30px; }
 .sub02_2 section.programSec .pg_title { font-size: 32px; font-weight: 700; margin-bottom: 2vw; line-height: 1.5; }
 .sub02_2 section.programSec .pg_text { font-size: 18px; font-weight: 700; margin: 25px 0 20px; }
-.sub02_2 section.programSec .pro_btn { width: 300px; padding: 10px 0; font-size: 20px; font-weight: 700; color: #CF2E41; background: #fff; border-radius: 4px; border: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+.sub02_2 section.programSec a .pro_btn { width: fit-content; position: relative; z-index: 2; }
+.sub02_2 section.programSec .pro_btn { width: 300px; padding: 10px 30px; font-size: 20px; font-weight: 700; color: #CF2E41; background: #fff; border-radius: 4px; border: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
 .sub02_2 br.br_950 { display: none; }
 .sub02_2 br.br_650 { display: none; }
 
@@ -1881,4 +1899,36 @@ section.valueSec ul > li .box2 .hash_text { padding: 10px 20px; background-color
     section.valueSec ul > li .box2 .hash_text { padding: 10px 5px; font-size: 12px; }
     section.valueSec ul > li .box2 .hash_div { gap: 5px; }
     section.valueSec ul > li .box1 .text_1.text_1_1 { font-size: 12px; } 
+}
+
+/* floating_menu */
+.floating_menu { position: fixed; right: 100px; bottom: 70px; z-index: 102; }
+.floating_menu ul { padding: 15px; display: flex; flex-direction: column; gap: 10px;  border-radius: 100px; background-color: transparent; transition: 0.3s; }
+.floating_menu ul.on { background-color: #fff; }
+.floating_menu ul li {  }
+.floating_menu ul li.f_list { opacity: 0; transition: all 0.3s; }
+.floating_menu ul li.f_list.on { opacity: 1; }
+.floating_menu ul li .item { text-align: center; }
+.floating_menu ul li .item .f_icon { margin-bottom: 5px; }
+.floating_menu ul li .item .f_text { font-size: 16px; font-weight: 500; }
+.floating_menu ul li.toggleBtn {  }
+.floating_menu ul li.toggleBtn .item2 { text-align: center; display: flex; justify-content: center; align-items: center; }
+.floating_menu ul li.toggleBtn .item2 .close_icon {  display:  none;}
+.floating_menu ul li.toggleBtn .item2 .close_icon.on { display: block; }
+.floating_menu ul li.toggleBtn .item2 .open_icon {  display:  none; }
+.floating_menu ul li.toggleBtn .item2 .open_icon.on { display: block; }
+
+@media screen and (max-width: 1250px) {
+    .floating_menu { right: 50px; bottom: 40px; }
+    .floating_menu ul li .item .f_icon { width: 40px; }
+    .floating_menu ul li.toggleBtn .item2 .close_icon { width: 40px; }
+    .floating_menu ul li.toggleBtn .item2 .open_icon { width: 40px; }
+    .floating_menu ul li .item .f_text { font-size: 14px; }
+}
+@media screen and (max-width: 650px) {
+    .floating_menu { padding: ; right: 20px; bottom: 40px; }
+    .floating_menu ul { padding: 15px 5px; }
+    .floating_menu ul li .item .f_icon { width: 32px; }
+    .floating_menu ul li.toggleBtn .item2 .close_icon { width: 32px; } 
+    .floating_menu ul li .item .f_text { font-size: 12px; }
 }

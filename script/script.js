@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     sub04_1_scroll();
     QnaToggle();
     sub02_2_count();
-
     qnaHandle2();
+    floatingMenu();
 })
 const QnaToggle = () => {
     $('.sub04_2 .contentSection .qnaList .qBox').click(function(){
@@ -570,4 +570,16 @@ const qnaHandle2 = () => {
   $('.minus_btn').click(function(){
     $(this).closest('.answer_box').slideUp();
   });
+}
+
+// floating menu
+const floatingMenu = () => {
+  $('.floating_menu .toggleBtn').click(function(){
+    $('.f_list').toggleClass('on');
+    $('.floating_menu ul').toggleClass('on');
+    // $(this).addClass('on');
+    // $(this).find('.open_icon').addClass('on');
+    $('.floating_menu ul li.toggleBtn .item2 .close_icon').toggleClass('on');
+    $('.floating_menu ul li.toggleBtn .item2 .open_icon').toggleClass('on');
+  })
 }
